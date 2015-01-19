@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite.Core", "NewsSite.Core\NewsSite.Core.csproj", "{4D6F9CF5-575A-4AC0-98CA-2DC17E5E5691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite.Web", "NewsSite.Web\NewsSite.Web.csproj", "{0582F2C5-68D5-4177-A526-EB0473E08F00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite.Data", "NewsSite.Data\NewsSite.Data.csproj", "{1C2AAE94-32D6-46A1-97E0-086A5E1D8A96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite.Service", "NewsSite.Service\NewsSite.Service.csproj", "{1F0891F0-2ED6-4F88-8237-EDCBD5EF5A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite.IOC", "NewsSite.IOC\NewsSite.IOC.csproj", "{246B45F7-6675-40D2-BD17-33709A7361FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite.Utilities", "NewsSite.Utilities\NewsSite.Utilities.csproj", "{00539038-880A-4AB3-AD66-99A3CA180F0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite.Web.Framework", "NewsSite.Web.Framework\NewsSite.Web.Framework.csproj", "{A026D041-E683-43B6-9E0A-7EA9FDEB17BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D6F9CF5-575A-4AC0-98CA-2DC17E5E5691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6F9CF5-575A-4AC0-98CA-2DC17E5E5691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6F9CF5-575A-4AC0-98CA-2DC17E5E5691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6F9CF5-575A-4AC0-98CA-2DC17E5E5691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0582F2C5-68D5-4177-A526-EB0473E08F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0582F2C5-68D5-4177-A526-EB0473E08F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0582F2C5-68D5-4177-A526-EB0473E08F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0582F2C5-68D5-4177-A526-EB0473E08F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C2AAE94-32D6-46A1-97E0-086A5E1D8A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C2AAE94-32D6-46A1-97E0-086A5E1D8A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C2AAE94-32D6-46A1-97E0-086A5E1D8A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C2AAE94-32D6-46A1-97E0-086A5E1D8A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F0891F0-2ED6-4F88-8237-EDCBD5EF5A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F0891F0-2ED6-4F88-8237-EDCBD5EF5A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F0891F0-2ED6-4F88-8237-EDCBD5EF5A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F0891F0-2ED6-4F88-8237-EDCBD5EF5A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246B45F7-6675-40D2-BD17-33709A7361FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246B45F7-6675-40D2-BD17-33709A7361FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246B45F7-6675-40D2-BD17-33709A7361FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246B45F7-6675-40D2-BD17-33709A7361FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00539038-880A-4AB3-AD66-99A3CA180F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00539038-880A-4AB3-AD66-99A3CA180F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00539038-880A-4AB3-AD66-99A3CA180F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00539038-880A-4AB3-AD66-99A3CA180F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A026D041-E683-43B6-9E0A-7EA9FDEB17BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A026D041-E683-43B6-9E0A-7EA9FDEB17BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A026D041-E683-43B6-9E0A-7EA9FDEB17BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A026D041-E683-43B6-9E0A-7EA9FDEB17BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
