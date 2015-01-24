@@ -39,7 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MembershipService\IMembershipService.cs" />
+    <Compile Include="MembershipService\MembershipService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NewsSite.Core\NewsSite.Core.csproj">
+      <Project>{4d6f9cf5-575a-4ac0-98ca-2dc17e5e5691}</Project>
+      <Name>NewsSite.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsSite.Data\NewsSite.Data.csproj">
+      <Project>{1c2aae94-32d6-46a1-97e0-086a5e1d8a96}</Project>
+      <Name>NewsSite.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

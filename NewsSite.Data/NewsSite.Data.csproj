@@ -54,7 +54,12 @@
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\NewsSite.Core\NewsSite.Core.csproj">
+      <Project>{4d6f9cf5-575a-4ac0-98ca-2dc17e5e5691}</Project>
+      <Name>NewsSite.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
