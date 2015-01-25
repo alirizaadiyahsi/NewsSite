@@ -6,8 +6,8 @@ using NewsSite.Web.Areas.Admin.Models;
 using NewsSite.Web.Framework.Controllers;
 using NewsSite.Web.Framework.Membership;
 using System;
-using System.Web.Mvc;
 using System.Linq;
+using System.Web.Mvc;
 
 namespace NewsSite.Web.Areas.Admin.Controllers
 {
@@ -122,6 +122,30 @@ namespace NewsSite.Web.Areas.Admin.Controllers
             }
 
             return View(model);
+        }
+
+        public ActionResult DeleteTag(int id)
+        {
+            var tag = _tagService.Find(id);
+            try
+            {
+                _tagService.Delete(tag);
+                _uow.SaveChanges();
+
+                messagesForView.Clear();
+                messagesForView.Add("İşlemi başarılı!");
+                Success(messagesForView);
+            }
+            catch (Exception ex)
+            {
+                messagesForView.Clear();
+                messagesForView.Add("İşlem başarısız!");
+                messagesForView.Add(ex.Message);
+                messagesForView.Add(ex.InnerException.Message);
+                Error(messagesForView);
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

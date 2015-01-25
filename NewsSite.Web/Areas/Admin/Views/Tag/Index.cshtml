@@ -20,5 +20,5 @@
 @helper Edit(NewsSite.Core.Database.Tables.Tag tag)
 {
     <a href='@Url.Action("EditTag", "Tag", new { id = tag.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href='@Url.Action("DeleteTag", "Tag", new { id = tag.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
 }
-

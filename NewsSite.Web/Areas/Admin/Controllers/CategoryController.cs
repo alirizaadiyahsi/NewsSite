@@ -128,5 +128,29 @@ namespace NewsSite.Web.Areas.Admin.Controllers
 
             return View(model);
         }
+
+        public ActionResult DeleteCategory(int id)
+        {
+            var category = _categoryService.Find(id);
+            try
+            {
+                _categoryService.Delete(category);
+                _uow.SaveChanges();
+
+                messagesForView.Clear();
+                messagesForView.Add("İşlemi başarılı!");
+                Success(messagesForView);
+            }
+            catch (Exception ex)
+            {
+                messagesForView.Clear();
+                messagesForView.Add("İşlem başarısız!");
+                messagesForView.Add(ex.Message);
+                messagesForView.Add(ex.InnerException.Message);
+                Error(messagesForView);
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

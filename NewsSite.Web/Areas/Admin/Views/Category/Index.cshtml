@@ -21,5 +21,5 @@
 @helper Edit(NewsSite.Core.Database.Tables.Category category)
 {
     <a href='@Url.Action("EditCategory", "Category", new { id = category.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href='@Url.Action("DeleteCategory", "Category", new { id = category.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
 }
-
