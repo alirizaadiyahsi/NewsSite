@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TagServices\TagService.cs" />
+    <Compile Include="TagServices\ITagService.cs" />
     <Compile Include="CategoryServices\CategoryService.cs" />
     <Compile Include="CategoryServices\ICategoryService.cs" />
     <Compile Include="MembershipServices\IMembershipService.cs" />

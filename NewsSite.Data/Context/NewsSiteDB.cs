@@ -15,6 +15,7 @@ namespace NewsSite.Data.Context
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Tag> Tag { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
