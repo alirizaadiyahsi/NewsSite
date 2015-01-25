@@ -1,0 +1,25 @@
+﻿@model IQueryable<NewsSite.Core.Database.Tables.Category>
+
+@{
+    ViewBag.Title = "Kategoriler";
+}
+
+<a href='@Url.Action("AddCategory", "Category")' class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Yeni Kategori</a>
+<hr />
+
+@using GridMvc.Html
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Edit(x));
+    columns.Add(column => column.Name).Titled("Kategori").Sortable(true);
+    columns.Add(column => column.Description).Titled("Açıklama").Sortable(true);
+    columns.Add(column => column.IsActive).Titled("Aktif").Sortable(true);
+    columns.Add(column => column.Order).Titled("Sıra").Sortable(true);
+    columns.Add(column => column.Slug).Titled("Seo Ad").Sortable(true);
+}).WithPaging(20)
+
+@helper Edit(NewsSite.Core.Database.Tables.Category category)
+{
+    <a href='@Url.Action("EditCategory", "Category", new { id = category.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+}
+

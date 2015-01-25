@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace NewsSite.Web.Framework.HtmlHelpers
+namespace System.Web.Mvc.Html
 {
     public static class DisplayHelpers
     {

@@ -58,10 +58,10 @@
  * Main content
  */
 
-/*.main {
-  padding: 20px;
+.main {
+  padding-top: 20px;
 }
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .main {
     padding-right: 40px;
     padding-left: 40px;

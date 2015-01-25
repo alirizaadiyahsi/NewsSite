@@ -11,6 +11,16 @@
 
     <link href="~/Areas/Admin/Content/Dashboard.css" rel="stylesheet" />
     <link href="~/Areas/Admin/Content/Admin.css" rel="stylesheet" />
+
+    <script>
+        $(function () {
+            $('.nav-sidebar li a').each(function () {
+                if ($(this).attr('href') === window.location.pathname) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -34,15 +44,18 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li class="active"><a href="@Url.Action("AllPosts","Post")">Haberler<span class="sr-only">(current)</span></a></li>
-                    <li><a href="@Url.Action("Categories","Category")">Kategoriler</a></li>
-                    <li><a href="@Url.Action("Tags","Tag")">Etiketler</a></li>
-                    <li><a href="@Url.Action("Galeries","Galery")">Galeriler</a></li>
-                    <li><a href="@Url.Action("Comments","Comment")">Yorumlar</a></li>
-                    <li><a href="@Url.Action("Users","User")">Kullanıcılar</a></li>
+                    <li><a href="@Url.Action("Index","Post")">Haberler<span class="sr-only">(current)</span></a></li>
+                    <li><a href="@Url.Action("Index", "Category")">Kategoriler</a></li>
+                    <li><a href="@Url.Action("Index", "Tag")">Etiketler</a></li>
+                    <li><a href="@Url.Action("Index", "Galery")">Galeriler</a></li>
+                    <li><a href="@Url.Action("Index", "Comment")">Yorumlar</a></li>
+                    <li><a href="@Url.Action("Index", "User")">Kullanıcılar</a></li>
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div>
+                    @Html.DisplayMessage()
+                </div>
                 @RenderBody()
             </div>
         </div>

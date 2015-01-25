@@ -2,7 +2,8 @@ using Microsoft.Practices.Unity;
 using NewsSite.Core.Database.Tables;
 using NewsSite.Data.Repository;
 using NewsSite.Data.UnitOfWork;
-using NewsSite.Service.MembershipService;
+using NewsSite.Service.CategoryServices;
+using NewsSite.Service.MembershipServices;
 using System.Web.Mvc;
 using Unity.Mvc5;
 
@@ -27,14 +28,14 @@ namespace NewsSite.IOC
         {
             container.BindInRequestScope<IGenericRepository<User>, GenericRepository<User>>();
             container.BindInRequestScope<IGenericRepository<Role>, GenericRepository<Role>>();
-            //container.BindInRequestScope<IGenericRepository<City>, GenericRepository<City>>();
+            container.BindInRequestScope<IGenericRepository<Category>, GenericRepository<Category>>();
             //container.BindInRequestScope<IGenericRepository<District>, GenericRepository<District>>();
             //container.BindInRequestScope<IGenericRepository<UserType>, GenericRepository<UserType>>();
 
             container.BindInRequestScope<IUnitOfWork, UnitOfWork>();
 
             container.BindInRequestScope<IMembershipService, MembershipService>();
-            //container.BindInRequestScope<IRoleService, RoleService>();
+            container.BindInRequestScope<ICategoryService, CategoryService>();
             //container.BindInRequestScope<ILocationService, LocationService>();
         }
     }

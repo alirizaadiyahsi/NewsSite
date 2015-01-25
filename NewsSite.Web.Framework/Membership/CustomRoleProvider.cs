@@ -1,4 +1,4 @@
-﻿using NewsSite.Service.MembershipService;
+﻿using NewsSite.Service.MembershipServices;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;

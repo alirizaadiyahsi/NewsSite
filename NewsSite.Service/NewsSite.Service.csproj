@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MembershipService\IMembershipService.cs" />
-    <Compile Include="MembershipService\MembershipService.cs" />
+    <Compile Include="CategoryServices\CategoryService.cs" />
+    <Compile Include="CategoryServices\ICategoryService.cs" />
+    <Compile Include="MembershipServices\IMembershipService.cs" />
+    <Compile Include="MembershipServices\MembershipService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

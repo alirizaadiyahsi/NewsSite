@@ -43,6 +43,7 @@
     <Compile Include="Application\DTOs.cs" />
     <Compile Include="Application\Enums.cs" />
     <Compile Include="Database\BaseEntity.cs" />
+    <Compile Include="Database\Tables\Category.cs" />
     <Compile Include="Database\Tables\Role.cs" />
     <Compile Include="Database\Tables\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
