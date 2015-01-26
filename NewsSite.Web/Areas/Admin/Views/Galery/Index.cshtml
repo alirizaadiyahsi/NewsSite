@@ -15,6 +15,7 @@
     columns.Add(column => column.Description).Titled("Açıklama").Sortable(true);
     columns.Add(column => column.IsActive).Titled("Aktif").Sortable(true);
     columns.Add(column => column.Slug).Titled("Seo Ad").Sortable(true);
+    columns.Add(column => column.GaleryImages.Count).Titled("Resim Sayısı").Sortable(true);
 }).WithPaging(20)
 
 @helper Edit(NewsSite.Core.Database.Tables.Galery galery)

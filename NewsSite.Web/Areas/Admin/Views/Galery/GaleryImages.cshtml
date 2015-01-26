@@ -21,16 +21,6 @@
             @Html.ValidationMessageFor(model => model.Order, "", new { @class = "text-danger" })
         </div>
     </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <div class="checkbox">
-                @Html.EditorFor(model => model.IsActive)
-                @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
-            </div>
-        </div>
-    </div>
     <button type="submit" class="btn btn-primary">Yükle</button>
 }
 <hr />
@@ -40,7 +30,6 @@
 {
     columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Edit(x));
     columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Image(x));
-    columns.Add(column => column.IsActive).Titled("Aktif").Sortable(true);
 }).WithPaging(20)
 
 @helper Edit(NewsSite.Core.Database.Tables.GaleryImage galeryImage)

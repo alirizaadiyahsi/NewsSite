@@ -161,7 +161,6 @@ namespace NewsSite.Web.Areas.Admin.Controllers
             var model = new GaleryImageModel();
 
             model.Galery = galery;
-            model.IsActive = true;
             model.Order = 0;
 
             return View(model);
@@ -206,7 +205,7 @@ namespace NewsSite.Web.Areas.Admin.Controllers
                     galeryImage.GaleryId = model.Galery.Id;
                     galeryImage.InsertDate = DateTime.Now;
                     galeryImage.InsertUserId = CustomMembership.CurrentUser().Id;
-                    galeryImage.IsActive = model.IsActive;
+                    galeryImage.IsActive = true;
                     galeryImage.Order = model.Order;
                     galeryImage.ImgUrl = Path.Combine("Content/Images/uploads/Galery/" + model.Galery.Id, fileName);
                     galeryImage.ImgUrlSmall = Path.Combine("Content/Images/uploads/Galery/" + model.Galery.Id + "/Small", fileName);
@@ -233,10 +232,7 @@ namespace NewsSite.Web.Areas.Admin.Controllers
                 }
             }
 
-            var galery = _galeryService.Find(model.Galery.Id);
-            model.Galery = galery;
-
-            return View("GaleryImages", model);
+            return RedirectToAction("GaleryImages", new { galeryId = model.Galery.Id });
         }
 
         public ActionResult DeleteGaleryImage(int id)
