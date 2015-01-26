@@ -44,6 +44,8 @@
     <Compile Include="Application\Enums.cs" />
     <Compile Include="Database\BaseEntity.cs" />
     <Compile Include="Database\Tables\Category.cs" />
+    <Compile Include="Database\Tables\Galery.cs" />
+    <Compile Include="Database\Tables\GaleryImage.cs" />
     <Compile Include="Database\Tables\Role.cs" />
     <Compile Include="Database\Tables\Tag.cs" />
     <Compile Include="Database\Tables\User.cs" />

@@ -1,0 +1,25 @@
+﻿@model IQueryable<NewsSite.Core.Database.Tables.Galery>
+
+@{
+    ViewBag.Title = "Galeriler";
+}
+
+<a href='@Url.Action("AddGalery", "Galery")' class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Yeni Galeri</a>
+<hr />
+
+@using GridMvc.Html
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Edit(x));
+    columns.Add(column => column.Name).Titled("Galeri").Sortable(true);
+    columns.Add(column => column.Description).Titled("Açıklama").Sortable(true);
+    columns.Add(column => column.IsActive).Titled("Aktif").Sortable(true);
+    columns.Add(column => column.Slug).Titled("Seo Ad").Sortable(true);
+}).WithPaging(20)
+
+@helper Edit(NewsSite.Core.Database.Tables.Galery galery)
+{
+    <a href='@Url.Action("GaleryImages", "Galery", new { galeryId = galery.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-camera"></span></a>
+    <a href='@Url.Action("EditGalery", "Galery", new { id = galery.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href='@Url.Action("DeleteGalery", "Galery", new { id = galery.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+}

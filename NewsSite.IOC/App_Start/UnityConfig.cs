@@ -3,6 +3,7 @@ using NewsSite.Core.Database.Tables;
 using NewsSite.Data.Repository;
 using NewsSite.Data.UnitOfWork;
 using NewsSite.Service.CategoryServices;
+using NewsSite.Service.GaleryServices;
 using NewsSite.Service.MembershipServices;
 using NewsSite.Service.TagServices;
 using System.Web.Mvc;
@@ -31,13 +32,14 @@ namespace NewsSite.IOC
             container.BindInRequestScope<IGenericRepository<Role>, GenericRepository<Role>>();
             container.BindInRequestScope<IGenericRepository<Category>, GenericRepository<Category>>();
             container.BindInRequestScope<IGenericRepository<Tag>, GenericRepository<Tag>>();
-            //container.BindInRequestScope<IGenericRepository<UserType>, GenericRepository<UserType>>();
+            container.BindInRequestScope<IGenericRepository<Galery>, GenericRepository<Galery>>();
 
             container.BindInRequestScope<IUnitOfWork, UnitOfWork>();
 
             container.BindInRequestScope<IMembershipService, MembershipService>();
             container.BindInRequestScope<ICategoryService, CategoryService>();
             container.BindInRequestScope<ITagService, TagService>();
+            container.BindInRequestScope<IGaleryService, GaleryService>();
         }
     }
 

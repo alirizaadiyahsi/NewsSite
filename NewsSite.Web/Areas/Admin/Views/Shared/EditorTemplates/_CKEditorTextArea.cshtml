@@ -1,0 +1,19 @@
+﻿@model string
+
+<script src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
+<script src="@Url.Content("~/Scripts/ckfinder/ckfinder.js")"></script>
+
+<script>
+    $(function () {
+        CKEDITOR.replace('ck_editor_textarea', {
+            filebrowserBrowseUrl: app_root + 'Scripts/ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl: app_root + 'Scripts/ckfinder/ckfinder.html?type=Images',
+            filebrowserFlashBrowseUrl: app_root + 'Scripts/ckfinder/ckfinder.html?type=Flash',
+            filebrowserUploadUrl: app_root + 'Scripts/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: app_root + 'Scripts/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images',
+            filebrowserFlashUploadUrl: app_root + 'Scripts/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Flash'
+        });
+    });
+</script>
+
+@Html.TextAreaFor(model => Model, new { @class = "form-control", id = "ck_editor_textarea" })
