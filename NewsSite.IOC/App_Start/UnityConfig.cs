@@ -5,6 +5,7 @@ using NewsSite.Data.UnitOfWork;
 using NewsSite.Service.CategoryServices;
 using NewsSite.Service.GaleryServices;
 using NewsSite.Service.MembershipServices;
+using NewsSite.Service.PostServices;
 using NewsSite.Service.TagServices;
 using System.Web.Mvc;
 using Unity.Mvc5;
@@ -33,6 +34,8 @@ namespace NewsSite.IOC
             container.BindInRequestScope<IGenericRepository<Category>, GenericRepository<Category>>();
             container.BindInRequestScope<IGenericRepository<Tag>, GenericRepository<Tag>>();
             container.BindInRequestScope<IGenericRepository<Galery>, GenericRepository<Galery>>();
+            container.BindInRequestScope<IGenericRepository<Post>, GenericRepository<Post>>();
+            container.BindInRequestScope<IGenericRepository<PostPosition>, GenericRepository<PostPosition>>();
 
             container.BindInRequestScope<IUnitOfWork, UnitOfWork>();
 
@@ -40,6 +43,7 @@ namespace NewsSite.IOC
             container.BindInRequestScope<ICategoryService, CategoryService>();
             container.BindInRequestScope<ITagService, TagService>();
             container.BindInRequestScope<IGaleryService, GaleryService>();
+            container.BindInRequestScope<IPostService, PostService>();
         }
     }
 

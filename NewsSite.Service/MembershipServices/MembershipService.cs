@@ -51,7 +51,7 @@ namespace NewsSite.Service.MembershipServices
             string confirmationId = user.ConfirmationId.ToString();
             ConfirmationUrl += "/Account/ConfirmUser?confirmationId=" + confirmationId;
 
-            var message = new MailMessage("info@gundemdisi.net", user.Email)
+            var message = new MailMessage("info@mailadresi.com", user.Email)
             {
                 Subject = "Lütfen e-posta adresinizi onaylayınız.",
                 Body = ConfirmationUrl
@@ -128,6 +128,11 @@ namespace NewsSite.Service.MembershipServices
         public void Update(User user)
         {
             _userRepository.Update(user);
+        }
+
+        public IQueryable<User> GetAllUsers()
+        {
+            return _userRepository.GetAll();
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿@model IQueryable<NewsSite.Core.Database.Tables.Post>
+
+@{
+    ViewBag.Title = "Haberler";
+}
+
+<a href='@Url.Action("AddPost", "Post")' class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Yeni Haber</a>
+<hr />
+
+@using GridMvc.Html
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Edit(x)).SetWidth(100);
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Image(x));
+    columns.Add(column => column.Title).Titled("Başlık").Sortable(true);
+    columns.Add(column => column.IsActive).Titled("Aktif").Sortable(true);
+}).WithPaging(20)
+
+@helper Edit(NewsSite.Core.Database.Tables.Post post)
+{
+    <a href='@Url.Action("EditPost", "Post", new { id = post.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href='@Url.Action("DeletePost", "Post", new { id = post.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+}
+
+@helper Image(NewsSite.Core.Database.Tables.Post post)
+{
+    <img src="~/@post.ImgUrlSmall" alt="@post.Title" class="img-rounded">
+}

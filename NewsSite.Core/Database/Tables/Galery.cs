@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace NewsSite.Core.Database.Tables
 {
@@ -15,6 +11,9 @@ namespace NewsSite.Core.Database.Tables
 
         public string Name { get; set; }
         public string Slug { get; set; }
+        public int? PostId { get; set; }
+
+        public virtual Post Post { get; set; }
 
         public virtual ICollection<GaleryImage> GaleryImages { get; set; }
     }

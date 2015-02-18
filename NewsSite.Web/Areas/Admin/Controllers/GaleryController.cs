@@ -6,11 +6,9 @@ using NewsSite.Web.Areas.Admin.Models;
 using NewsSite.Web.Framework.Controllers;
 using NewsSite.Web.Framework.Membership;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace NewsSite.Web.Areas.Admin.Controllers

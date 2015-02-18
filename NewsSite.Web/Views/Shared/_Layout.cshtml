@@ -3,15 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    <meta name="keywords" content="@ViewBag.Keywords" />
+    <meta property="fb:page_id" content="350120665139045" />
+    <title>Gündemden Sıkılanlar İçin Gündem Dışı Herşey! - @ViewBag.Title</title>
+    <link rel="canonical" href="" />
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/maincss")
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
     <script>
         var app_root = '@Url.Content("~")';
     </script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -19,27 +24,36 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Site Name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Kategoriler <span class="caret"></span></a>
+                        @Html.Action("_CategoriesMenu", "Home")
+                    </li>
+                    <li>@Html.ActionLink("Makale Gönderin", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div id="body" class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>&copy; @DateTime.Now.Year - Gündem Dışı</p>
+                </div>
+                <div class="col-xs-6" style="text-align:right;">
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

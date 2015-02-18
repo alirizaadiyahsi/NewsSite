@@ -1,6 +1,10 @@
 ﻿body {
 }
 
+.select2-container {
+    width: 100%;
+}
+
 /*
     bootstrap overrides
 */

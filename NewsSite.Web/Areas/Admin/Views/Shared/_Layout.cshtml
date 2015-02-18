@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/maincss")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
@@ -12,7 +12,11 @@
     <link href="~/Areas/Admin/Content/Dashboard.css" rel="stylesheet" />
     <link href="~/Areas/Admin/Content/Admin.css" rel="stylesheet" />
 
+    <link href="~/Content/css/select2.css" rel="stylesheet" />
+    <script src="~/Scripts/select2.min.js"></script>
     <script>
+        var app_root = '@Url.Content("~")';
+
         $(function () {
             $('.nav-sidebar li a').each(function () {
                 if ($(this).attr('href') === window.location.pathname) {

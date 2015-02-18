@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace NewsSite.Web
@@ -14,9 +10,24 @@ namespace NewsSite.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "PostDetail",
+                url: "PostDetail/{category}/{id}/{slug}",
+                defaults: new { controller = "Post", action = "PostDetail", category = UrlParameter.Optional, id = UrlParameter.Optional, slug = UrlParameter.Optional },
+                namespaces: new[] { "NewsSite.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "CategoryDetail",
+                url: "CategoryDetail/{id}/{slug}",
+                defaults: new { controller = "Post", action = "CategoryDetail", id = UrlParameter.Optional, slug = UrlParameter.Optional },
+                namespaces: new[] { "NewsSite.Web.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "NewsSite.Web.Controllers" }
             );
         }
     }
