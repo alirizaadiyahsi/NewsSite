@@ -1,0 +1,20 @@
+﻿@model NewsSite.Core.Database.Tables.Category
+
+@{
+    ViewBag.Title = "CategoryDetail";
+}
+
+@foreach (var item in Model.Posts)
+{
+    <a href="@Url.Action("PostDetail", "Post", new { id = item.Id, slug = item.Slug, category = item.Category.Slug })">
+        <div class="col-sm-6 col-md-3">
+            <div class="cm-img-container-middle">
+                <img src="~/@item.ImgUrlMiddle" class="img-thumbnail">
+            </div>
+            <h4 class="cm-post-header">@item.Title</h4>
+            <p class="cm-post-desc">
+                @item.Description
+            </p>
+        </div>
+    </a>
+}

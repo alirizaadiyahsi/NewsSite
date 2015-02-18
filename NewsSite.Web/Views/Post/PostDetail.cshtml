@@ -1,0 +1,65 @@
+﻿@model NewsSite.Core.Database.Tables.Post
+
+
+@{
+    ViewBag.Title = "PostDetail";
+}
+
+@section Scripts{
+    <script type="text/javascript">var switchTo5x = true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({ publisher: "5c1504c6-2a7c-4ba4-8115-df5d130b9574", doNotHash: false, doNotCopy: false, hashAddressBar: false });</script>
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/tr_TR/sdk.js#xfbml=1&appId=350120665139045&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <a href="@Url.Action("PostDetail", "Post", new { id = Model.Id, slug = Model.Slug,category = Model.Category.Slug })">
+            <h2>@Model.Title</h2>
+        </a>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <p><span class="glyphicon glyphicon-time"></span> @Model.InsertDate</p>
+            </div>
+            <div class="col-sm-6" style="text-align:right;">
+                <span class='st_facebook_large' displaytext='Facebook'></span>
+                <span class='st_twitter_large' displaytext='Tweet'></span>
+                <span class='st_googleplus_large' displaytext='Google +'></span>
+                <span class='st_linkedin_large' displaytext='LinkedIn'></span>
+                <span class='st_email_large' displaytext='Email'></span>
+            </div>
+        </div>
+        <hr>
+        <img class="img-responsive img-thumbnail" src="~/@Model.ImgUrlBig" alt="">
+        <hr>
+        <p class="lead">@Model.Description</p>
+        <div class="cm-post-content">
+            @Html.Raw(Model.Content)
+        </div>
+        <hr>
+        <div style="text-align:center;">
+            <strong>YORUMLAR</strong>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @Html.Action("_MostReaded", "Home")
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <div style="overflow:hidden;padding-bottom:10px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

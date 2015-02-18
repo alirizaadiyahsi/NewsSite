@@ -39,17 +39,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GaleryServices\GaleryService.cs" />
-    <Compile Include="GaleryServices\IGaleryService.cs" />
-    <Compile Include="PostServices\IPostService.cs" />
-    <Compile Include="PostServices\PostService.cs" />
-    <Compile Include="TagServices\TagService.cs" />
-    <Compile Include="TagServices\ITagService.cs" />
-    <Compile Include="CategoryServices\CategoryService.cs" />
-    <Compile Include="CategoryServices\ICategoryService.cs" />
-    <Compile Include="MembershipServices\IMembershipService.cs" />
-    <Compile Include="MembershipServices\MembershipService.cs" />
+    <Compile Include="CategoryServices\CategoryService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CategoryServices\ICategoryService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GaleryServices\GaleryService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GaleryServices\IGaleryService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MembershipServices\IMembershipService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MembershipServices\MembershipService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PostServices\IPostService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PostServices\PostService.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TagServices\ITagService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TagServices\TagService.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NewsSite.Core\NewsSite.Core.csproj">

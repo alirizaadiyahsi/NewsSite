@@ -123,106 +123,239 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
-    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
-    <Compile Include="Areas\Admin\Controllers\GaleryController.cs" />
-    <Compile Include="Areas\Admin\Controllers\PostController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TagController.cs" />
-    <Compile Include="Areas\Admin\Models\CategoryModels.cs" />
-    <Compile Include="Areas\Admin\Models\GaleryModels.cs" />
-    <Compile Include="Areas\Admin\Models\PostModel.cs" />
-    <Compile Include="Areas\Admin\Models\TagModels.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="App_Start\BundleConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Start\FilterConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Controllers\GaleryController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Controllers\PostController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Controllers\TagController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Models\CategoryModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Models\GaleryModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Models\PostModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Models\TagModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\HomeController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\PostController.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AccountModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\ckfinder\_source\AccessControlRules.cs" />
-    <Compile Include="Views\PostController.cs" />
-    <Content Include="Areas\Admin\Views\Post\EditPost.cshtml" />
-    <None Include="Properties\PublishProfiles\gundemdisiyeni.pubxml" />
-    <None Include="Scripts\ckfinder\_source\AssemblyInfo.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CKFinderEvent.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CKFinderEventArgs.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CKFinderPlugin.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\CommandHandlerBase.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\CopyFilesCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\CreateFolderCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\DeleteFilesCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\DeleteFolderCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\DownloadFileCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\ErrorCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\FileUploadCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\GetFilesCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\GetFoldersCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\InitCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\LoadCookiesCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\MoveFilesCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\QuickUploadCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\RenameFileCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\RenameFolderCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\ThumbnailCommandHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\XmlCommandHandlerBase.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\Config.cs" />
+    <Compile Include="Scripts\ckfinder\_source\AccessControlRules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CKFinderEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CKFinderEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CKFinderPlugin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\CommandHandlerBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\CopyFilesCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\CreateFolderCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\DeleteFilesCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\DeleteFolderCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\DownloadFileCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\ErrorCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\FileUploadCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\GetFilesCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\GetFoldersCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\InitCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\LoadCookiesCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\MoveFilesCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\QuickUploadCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\RenameFileCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\RenameFolderCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\ThumbnailCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\CommandHandlers\XmlCommandHandlerBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Scripts\ckfinder\_source\Connector\Connector.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Scripts\ckfinder\_source\Connector\ConnectorException.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\Errors.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\FixFlashCookies.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\FolderHandler.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\ImageTools.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\Lang.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\OctreeQuantizer.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\Quantizer.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\RegexLib.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\RestartModule.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\Util.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Connector\XmlUtil.cs" />
-    <Compile Include="Scripts\ckfinder\_source\FileBrowser.cs" />
-    <Compile Include="Scripts\ckfinder\_source\FileBrowserDesigner.cs" />
-    <None Include="Scripts\ckfinder\_source\Resources\Plugins\FileEditor\Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Resources\Plugins\FileEditor\SaveFile.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Resources\Plugins\ImageResize\ImageResize.cs" />
-    <None Include="Scripts\ckfinder\_source\Resources\Plugins\ImageResize\Properties\AssemblyInfo.cs" />
-    <None Include="Scripts\ckfinder\_source\Resources\Plugins\Watermark\Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Resources\Plugins\Watermark\Watermark.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Settings\AccessControl.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Settings\AccessControlManager.cs" />
+    <Compile Include="Scripts\ckfinder\_source\Connector\ConnectorException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\Errors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\FixFlashCookies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\FolderHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\ImageTools.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\Lang.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\OctreeQuantizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\Quantizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\RegexLib.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\RestartModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\Util.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Connector\XmlUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\FileBrowser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\FileBrowserDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Resources\Plugins\FileEditor\SaveFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Resources\Plugins\ImageResize\ImageResize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Resources\Plugins\Watermark\Watermark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Settings\AccessControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Settings\AccessControlManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Scripts\ckfinder\_source\Settings\ConfigFile.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Scripts\ckfinder\_source\Settings\Images.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Settings\ResourceType.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Settings\ResourceTypeManager.cs" />
-    <Compile Include="Scripts\ckfinder\_source\Settings\Thumbnails.cs" />
-    <Compile Include="Scripts\ckfinder\_source\TriStateBool.cs" />
-    <Content Include="Content\images\icons\facebook.png" />
-    <Content Include="Content\images\icons\google-plus.png" />
-    <Content Include="Content\images\icons\twitter.png" />
-    <Content Include="Content\images\nb-dots.png" />
-    <Content Include="Content\images\sep-widget.png" />
-    <Content Include="Views\Home\_MostReaded.cshtml" />
-    <Content Include="Views\Home\_CategoryPosts.cshtml" />
-    <Content Include="Views\Home\_SliderPosts.cshtml" />
-    <Content Include="Views\Post\CategoryDetail.cshtml" />
-    <Content Include="Views\Post\PostDetail.cshtml" />
-    <Content Include="Views\Home\_CategoriesMenu.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Scripts\ckfinder\_source\Settings\Images.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Settings\ResourceType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Settings\ResourceTypeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\Settings\Thumbnails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\ckfinder\_source\TriStateBool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\PostController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Properties\PublishProfiles\gundemdisiyeni.pubxml" />
     <Content Include="Areas\Admin\Content\Admin.css" />
     <Content Include="Areas\Admin\Content\Dashboard.css" />
     <Content Include="Areas\Admin\Scripts\Admin.js" />
+    <Content Include="Areas\Admin\Views\Category\AddCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\EditCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Galery\AddGalery.cshtml" />
+    <Content Include="Areas\Admin\Views\Galery\EditGalery.cshtml" />
+    <Content Include="Areas\Admin\Views\Galery\GaleryImages.cshtml" />
+    <Content Include="Areas\Admin\Views\Galery\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\AddPost.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\EditPost.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\_CKEditorTextArea.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\_HttpPostedFileBase.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Tag\AddTag.cshtml" />
+    <Content Include="Areas\Admin\Views\Tag\EditTag.cshtml" />
+    <Content Include="Areas\Admin\Views\Tag\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\select2-spinner.gif" />
     <Content Include="Content\css\select2.css" />
@@ -231,6 +364,11 @@
     <Content Include="Content\Gridmvc.css" />
     <Content Include="Content\gridmvc.datepicker.css" />
     <Content Include="Content\gridmvc.datepicker.min.css" />
+    <Content Include="Content\images\icons\facebook.png" />
+    <Content Include="Content\images\icons\google-plus.png" />
+    <Content Include="Content\images\icons\twitter.png" />
+    <Content Include="Content\images\nb-dots.png" />
+    <Content Include="Content\images\sep-widget.png" />
     <Content Include="Content\images\uploads\Galery\1\3ad9fe7f-a2eb-49c0-83e6-54d44b32be06.jpg" />
     <Content Include="Content\images\uploads\Galery\1\4d9aa643-3c53-46fd-baed-5cb1f9483751.PNG" />
     <Content Include="Content\images\uploads\Galery\1\595d6503-2a59-4cdd-b89e-4b6c7c2799a2.png" />
@@ -271,51 +409,115 @@
     <Content Include="Content\images\uploads\Galery\1\Small\b030731e-6600-4476-a306-7aba0c93a4d0.png" />
     <Content Include="Content\images\uploads\Galery\1\Small\bc0f64f1-6a1c-45d1-b1fb-e5a763ec529b.PNG" />
     <Content Include="Content\images\uploads\Galery\1\Small\cb684fdc-3b41-457d-9d3b-48b27960b198.PNG" />
+    <Content Include="Content\images\uploads\Galery\2\87ca4a2a-6141-4528-9de8-3a154874c0f5.jpg" />
+    <Content Include="Content\images\uploads\Galery\2\9bca4d43-47af-4f13-85e7-7d30f5de24a5.png" />
+    <Content Include="Content\images\uploads\Galery\2\Big\87ca4a2a-6141-4528-9de8-3a154874c0f5.jpg" />
+    <Content Include="Content\images\uploads\Galery\2\Big\9bca4d43-47af-4f13-85e7-7d30f5de24a5.png" />
+    <Content Include="Content\images\uploads\Galery\2\Middle\87ca4a2a-6141-4528-9de8-3a154874c0f5.jpg" />
+    <Content Include="Content\images\uploads\Galery\2\Middle\9bca4d43-47af-4f13-85e7-7d30f5de24a5.png" />
+    <Content Include="Content\images\uploads\Galery\2\Small\87ca4a2a-6141-4528-9de8-3a154874c0f5.jpg" />
+    <Content Include="Content\images\uploads\Galery\2\Small\9bca4d43-47af-4f13-85e7-7d30f5de24a5.png" />
+    <Content Include="Content\images\uploads\Post\242e0173-88ed-44d1-9fe0-bb17ba2d70b1.jpg" />
+    <Content Include="Content\images\uploads\Post\24a95801-0be7-4ec9-8472-4a8dacedf4e2.png" />
+    <Content Include="Content\images\uploads\Post\2d48758f-5e38-4d8c-a64f-edb01c89b193.jpg" />
+    <Content Include="Content\images\uploads\Post\2e043d66-6a9a-4834-83e0-379c02c4e9d9.Jpeg" />
+    <Content Include="Content\images\uploads\Post\3ac6037d-7143-4dab-b3e6-d166a3bcddba.jpg" />
+    <Content Include="Content\images\uploads\Post\448505ec-1969-4c87-a8b2-fd4231bba9a7.png" />
+    <Content Include="Content\images\uploads\Post\4c23c8cf-af3c-4a07-be44-a7a4139fd68f.jpg" />
+    <Content Include="Content\images\uploads\Post\4cc1bff3-ce8d-4d93-8c23-cfa1fdcf727e.jpg" />
+    <Content Include="Content\images\uploads\Post\5fee50b0-e7b9-4384-8ded-bfd1448b6fff.png" />
+    <Content Include="Content\images\uploads\Post\7084582f-db98-47be-b374-538ef13c983e.jpg" />
+    <Content Include="Content\images\uploads\Post\8252643f-82f8-4828-8220-10540729446b.jpg" />
+    <Content Include="Content\images\uploads\Post\8ff112a7-ebc1-451c-886b-e17dd6e7616b.jpg" />
+    <Content Include="Content\images\uploads\Post\a9c321f0-1b42-45f9-961b-a0a72e6a3486.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\242e0173-88ed-44d1-9fe0-bb17ba2d70b1.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\24a95801-0be7-4ec9-8472-4a8dacedf4e2.png" />
+    <Content Include="Content\images\uploads\Post\Big\2d48758f-5e38-4d8c-a64f-edb01c89b193.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\2e043d66-6a9a-4834-83e0-379c02c4e9d9.Jpeg" />
+    <Content Include="Content\images\uploads\Post\Big\3ac6037d-7143-4dab-b3e6-d166a3bcddba.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\448505ec-1969-4c87-a8b2-fd4231bba9a7.png" />
+    <Content Include="Content\images\uploads\Post\Big\4c23c8cf-af3c-4a07-be44-a7a4139fd68f.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\4cc1bff3-ce8d-4d93-8c23-cfa1fdcf727e.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\5fee50b0-e7b9-4384-8ded-bfd1448b6fff.png" />
+    <Content Include="Content\images\uploads\Post\Big\7084582f-db98-47be-b374-538ef13c983e.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\8252643f-82f8-4828-8220-10540729446b.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\8ff112a7-ebc1-451c-886b-e17dd6e7616b.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\a9c321f0-1b42-45f9-961b-a0a72e6a3486.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\ced49c3c-3f73-4b8b-bd15-64a739b18a8a.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\d6ec3258-bf41-4a4a-8240-67e4130bfd10.png" />
+    <Content Include="Content\images\uploads\Post\Big\ec5b4dc2-8f27-47d9-95f0-bb400e283af4.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\f5475505-0ddd-4791-a145-cc3b5bc54e85.jpg" />
+    <Content Include="Content\images\uploads\Post\Big\fb2a5682-a086-42e5-b043-868b5a94e661.jpg" />
+    <Content Include="Content\images\uploads\Post\ced49c3c-3f73-4b8b-bd15-64a739b18a8a.jpg" />
+    <Content Include="Content\images\uploads\Post\d6ec3258-bf41-4a4a-8240-67e4130bfd10.png" />
+    <Content Include="Content\images\uploads\Post\ec5b4dc2-8f27-47d9-95f0-bb400e283af4.jpg" />
+    <Content Include="Content\images\uploads\Post\f5475505-0ddd-4791-a145-cc3b5bc54e85.jpg" />
+    <Content Include="Content\images\uploads\Post\fb2a5682-a086-42e5-b043-868b5a94e661.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\242e0173-88ed-44d1-9fe0-bb17ba2d70b1.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\24a95801-0be7-4ec9-8472-4a8dacedf4e2.png" />
+    <Content Include="Content\images\uploads\Post\Middle\2d48758f-5e38-4d8c-a64f-edb01c89b193.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\2e043d66-6a9a-4834-83e0-379c02c4e9d9.Jpeg" />
+    <Content Include="Content\images\uploads\Post\Middle\3ac6037d-7143-4dab-b3e6-d166a3bcddba.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\448505ec-1969-4c87-a8b2-fd4231bba9a7.png" />
+    <Content Include="Content\images\uploads\Post\Middle\4c23c8cf-af3c-4a07-be44-a7a4139fd68f.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\4cc1bff3-ce8d-4d93-8c23-cfa1fdcf727e.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\5fee50b0-e7b9-4384-8ded-bfd1448b6fff.png" />
+    <Content Include="Content\images\uploads\Post\Middle\7084582f-db98-47be-b374-538ef13c983e.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\8252643f-82f8-4828-8220-10540729446b.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\8ff112a7-ebc1-451c-886b-e17dd6e7616b.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\a9c321f0-1b42-45f9-961b-a0a72e6a3486.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\ced49c3c-3f73-4b8b-bd15-64a739b18a8a.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\d6ec3258-bf41-4a4a-8240-67e4130bfd10.png" />
+    <Content Include="Content\images\uploads\Post\Middle\ec5b4dc2-8f27-47d9-95f0-bb400e283af4.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\f5475505-0ddd-4791-a145-cc3b5bc54e85.jpg" />
+    <Content Include="Content\images\uploads\Post\Middle\fb2a5682-a086-42e5-b043-868b5a94e661.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\242e0173-88ed-44d1-9fe0-bb17ba2d70b1.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\24a95801-0be7-4ec9-8472-4a8dacedf4e2.png" />
+    <Content Include="Content\images\uploads\Post\Small\2d48758f-5e38-4d8c-a64f-edb01c89b193.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\2e043d66-6a9a-4834-83e0-379c02c4e9d9.Jpeg" />
+    <Content Include="Content\images\uploads\Post\Small\3ac6037d-7143-4dab-b3e6-d166a3bcddba.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\448505ec-1969-4c87-a8b2-fd4231bba9a7.png" />
+    <Content Include="Content\images\uploads\Post\Small\4c23c8cf-af3c-4a07-be44-a7a4139fd68f.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\4cc1bff3-ce8d-4d93-8c23-cfa1fdcf727e.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\5fee50b0-e7b9-4384-8ded-bfd1448b6fff.png" />
+    <Content Include="Content\images\uploads\Post\Small\7084582f-db98-47be-b374-538ef13c983e.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\8252643f-82f8-4828-8220-10540729446b.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\8ff112a7-ebc1-451c-886b-e17dd6e7616b.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\a9c321f0-1b42-45f9-961b-a0a72e6a3486.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\ced49c3c-3f73-4b8b-bd15-64a739b18a8a.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\d6ec3258-bf41-4a4a-8240-67e4130bfd10.png" />
+    <Content Include="Content\images\uploads\Post\Small\ec5b4dc2-8f27-47d9-95f0-bb400e283af4.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\f5475505-0ddd-4791-a145-cc3b5bc54e85.jpg" />
+    <Content Include="Content\images\uploads\Post\Small\fb2a5682-a086-42e5-b043-868b5a94e661.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\ckfinder\_source\AssemblyInfo.cs" />
+    <Content Include="Scripts\ckfinder\_source\Resources\Plugins\FileEditor\Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\ckfinder\_source\Resources\Plugins\ImageResize\Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\ckfinder\_source\Resources\Plugins\Watermark\Properties\AssemblyInfo.cs" />
+    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <Content Include="Grid.mvc.readme" />
-    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Category\AddCategory.cshtml" />
-    <Content Include="Areas\Admin\Views\Category\EditCategory.cshtml" />
-    <Content Include="Areas\Admin\Views\Tag\AddTag.cshtml" />
-    <Content Include="Areas\Admin\Views\Tag\EditTag.cshtml" />
-    <Content Include="Areas\Admin\Views\Tag\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Galery\EditGalery.cshtml" />
-    <Content Include="Areas\Admin\Views\Galery\AddGalery.cshtml" />
-    <Content Include="Areas\Admin\Views\Galery\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Galery\GaleryImages.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\_CKEditorTextArea.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\_HttpPostedFileBase.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Areas\Admin\Views\Post\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Post\AddPost.cshtml" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\CHANGES.html" />
     <Content Include="Scripts\ckeditor\ckeditor.asp" />
     <Content Include="Scripts\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\ckeditor\ckeditor.pack" />
+    <Content Include="Scripts\ckeditor\ckeditor.php" />
     <Content Include="Scripts\ckeditor\ckeditor_basic.js" />
     <Content Include="Scripts\ckeditor\ckeditor_basic_source.js" />
-    <Content Include="Scripts\ckeditor\ckeditor_php5.php" />
     <Content Include="Scripts\ckeditor\ckeditor_php4.php" />
-    <Content Include="Scripts\ckeditor\ckeditor.php" />
-    <Content Include="Scripts\ckeditor\ckeditor.pack" />
-    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
-    <Content Include="Scripts\ckfinder\userfiles\.htaccess" />
-    <Content Include="Scripts\ckfinder\_source\CKFinderKey.snk" />
-    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
-    <Content Include="Scripts\bootstrap-datepicker.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ckeditor\ckeditor_php5.php" />
     <Content Include="Scripts\ckeditor\ckeditor_source.js" />
     <Content Include="Scripts\ckeditor\config.js" />
     <Content Include="Scripts\ckeditor\contents.css" />
@@ -1031,6 +1233,7 @@
     <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\addon\mode\overlay.js" />
     <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\lib\codemirror.css" />
     <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\lib\codemirror.js" />
+    <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\mode\clike\clike.js" />
     <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\mode\css\css.js" />
     <Content Include="Scripts\ckfinder\plugins\fileeditor\codemirror\mode\htmlmixed\htmlmixed.js" />
@@ -1241,6 +1444,7 @@
     <Content Include="Scripts\ckfinder\skins\v1\skin.js" />
     <Content Include="Scripts\ckfinder\skins\v1\uipanel.css" />
     <Content Include="Scripts\ckfinder\translations.txt" />
+    <Content Include="Scripts\ckfinder\userfiles\.htaccess" />
     <Content Include="Scripts\ckfinder\_samples\aspx\ckeditor.aspx" />
     <Content Include="Scripts\ckfinder\_samples\aspx\fckeditor.aspx" />
     <Content Include="Scripts\ckfinder\_samples\aspx\popup.aspx" />
@@ -1258,6 +1462,7 @@
     <Content Include="Scripts\ckfinder\_source\CKFinder.ico" />
     <Content Include="Scripts\ckfinder\_source\CKFinder.Net.csproj" />
     <Content Include="Scripts\ckfinder\_source\CKFinder.Net.sln" />
+    <Content Include="Scripts\ckfinder\_source\CKFinderKey.snk" />
     <Content Include="Scripts\ckfinder\_source\Resources\Plugins\FileEditor\CKFinder.ico" />
     <Content Include="Scripts\ckfinder\_source\Resources\Plugins\FileEditor\FileEditor.csproj" />
     <Content Include="Scripts\ckfinder\_source\Resources\Plugins\FileEditor\FileEditor.sln" />
@@ -1273,7 +1478,6 @@
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
     <Content Include="Scripts\jquery-2.1.3.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -1332,7 +1536,33 @@
     <Content Include="Scripts\Select2-locales\select2_locale_zh-TW.js" />
     <Content Include="Scripts\select2.js" />
     <Content Include="Scripts\select2.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\_CategoriesMenu.cshtml" />
+    <Content Include="Views\Home\_CategoryPosts.cshtml" />
+    <Content Include="Views\Home\_MostReaded.cshtml" />
+    <Content Include="Views\Home\_SliderPosts.cshtml" />
+    <Content Include="Views\Post\CategoryDetail.cshtml" />
+    <Content Include="Views\Post\PostDetail.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Grid.cshtml" />
+    <Content Include="Views\Shared\_GridPager.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Shared\_LoginPartial.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1340,21 +1570,10 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_GridPager.cshtml" />
-    <Content Include="Views\Shared\_Grid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ckfinder\userfiles\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

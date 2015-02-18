@@ -1,0 +1,19 @@
+﻿@model IQueryable<NewsSite.Core.Database.Tables.Post>
+
+<h4 class="cm-featured-header">En Çok Okunanlar</h4>
+
+@foreach (var item in Model)
+{
+    <a href="@Url.Action("PostDetail", "Post", new { id = item.Id, slug = item.Slug, category = item.Category.Slug })">
+    <div class="row">
+    <div class="col-xs-3 cm-img-small">
+    <img src="~/@item.ImgUrlSmall" class="img-thumbnail" />
+    </div>
+    <div class="col-xs-9">
+    <p class="cm-featured-title">
+    @item.Title
+    </p>
+    </div>
+    </div>
+    </a>
+}

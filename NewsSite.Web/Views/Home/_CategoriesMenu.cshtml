@@ -1,0 +1,6 @@
+﻿<ul class="dropdown-menu" role="menu">
+    @foreach (var item in Session[NewsSite.Core.Application.Keys.Categories] as List<NewsSite.Core.Database.Tables.Category>)
+    {
+        <li><a href="@Url.Action("CategoryDetail", "Post", new { id = item.Id, slug = item.Slug })">@item.Name</a></li>
+    }
+</ul>
