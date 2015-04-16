@@ -22,6 +22,17 @@ NewsSite uses a number of open source projects to work properly:
 
 Note: You should add admin user and admin role manually that roleName should be "Admin"
 
+### Screenshots
+
+![alt tag](http://g25.imgup.net/Capture4366.PNG)
+
+![alt tag](http://f52.imgup.net/Capture12641.PNG)
+
+![alt tag](http://n04.imgup.net/Capture2bab4.PNG)
+
+![alt tag](http://i18.imgup.net/Capture97b7.PNG)
+
+
 License
 ----
 
