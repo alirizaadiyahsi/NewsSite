@@ -2,11 +2,11 @@
 
 namespace NewsSite.Core.Database.Tables
 {
-    public class Galery : BaseEntity
+    public class PictureGalery : BaseEntity
     {
-        public Galery()
+        public PictureGalery()
         {
-            GaleryImages = new HashSet<GaleryImage>();
+            Pictures = new HashSet<Picture>();
         }
 
         public string Name { get; set; }
@@ -15,6 +15,6 @@ namespace NewsSite.Core.Database.Tables
 
         public virtual Post Post { get; set; }
 
-        public virtual ICollection<GaleryImage> GaleryImages { get; set; }
+        public virtual ICollection<Picture> Pictures { get; set; }
     }
 }

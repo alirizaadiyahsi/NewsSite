@@ -11,6 +11,6 @@
         public const string Email = "Email";
         public const string RealName = "RealName";
         public const string Id = "Id";
-        public static string Categories = "Categories";
+        public const string Categories = "Categories";
     }
 }

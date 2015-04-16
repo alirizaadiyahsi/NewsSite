@@ -76,12 +76,12 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.SelectedGaleryIds, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.SelectedPictureGaleryIds, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.ListBoxFor(model => model.SelectedGaleryIds,
+                @Html.ListBoxFor(model => model.SelectedPictureGaleryIds,
                 new SelectList(Model.Galeries, "Id", "Name"),
                 new { @class = "select2-multi-select", data_placeholder = "Galeriler..." })
-                @Html.ValidationMessageFor(model => model.SelectedGaleryIds, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.SelectedPictureGaleryIds, "", new { @class = "text-danger" })
             </div>
         </div>
 

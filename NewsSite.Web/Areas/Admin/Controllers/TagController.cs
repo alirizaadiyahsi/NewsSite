@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace NewsSite.Web.Areas.Admin.Controllers
 {
-    public class TagController : AdminController
+    public class TagController : PublicController
     {
         private readonly ITagService _tagService;
 

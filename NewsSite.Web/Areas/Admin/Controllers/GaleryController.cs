@@ -1,6 +1,6 @@
 ﻿using NewsSite.Core.Database.Tables;
 using NewsSite.Data.UnitOfWork;
-using NewsSite.Service.GaleryServices;
+using NewsSite.Service.PictureGaleryServices;
 using NewsSite.Utilities;
 using NewsSite.Web.Areas.Admin.Models;
 using NewsSite.Web.Framework.Controllers;
@@ -13,48 +13,48 @@ using System.Web.Mvc;
 
 namespace NewsSite.Web.Areas.Admin.Controllers
 {
-    public class GaleryController : AdminController
+    public class PictureGaleryController : PublicController
     {
-        private readonly IGaleryService _galeryService;
+        private readonly IPictureGaleryService _PictureGaleryService;
 
-        public GaleryController(IUnitOfWork uow, IGaleryService galeryService)
+        public PictureGaleryController(IUnitOfWork uow, IPictureGaleryService PictureGaleryService)
             : base(uow)
         {
-            _galeryService = galeryService;
+            _PictureGaleryService = PictureGaleryService;
         }
 
-        #region galery
+        #region PictureGalery
         public ActionResult Index()
         {
-            var galeries = _galeryService.GetAll();
+            var galeries = _PictureGaleryService.GetAll();
 
             return View(galeries.OrderBy(x => x.Id));
         }
 
-        public ActionResult AddGalery()
+        public ActionResult AddPictureGalery()
         {
-            var model = new GaleryModel();
+            var model = new PictureGaleryModel();
             model.IsActive = true;
 
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult AddGalery(GaleryModel model)
+        public ActionResult AddPictureGalery(PictureGaleryModel model)
         {
-            var galery = new Galery();
+            var PictureGalery = new PictureGalery();
 
             if (ModelState.IsValid)
             {
-                galery.Description = model.Description;
-                galery.InsertDate = DateTime.Now;
-                galery.InsertUserId = CustomMembership.CurrentUser().Id;
-                galery.IsActive = model.IsActive;
-                galery.Name = model.Name;
+                PictureGalery.Description = model.Description;
+                PictureGalery.InsertDate = DateTime.Now;
+                PictureGalery.InsertUserId = CustomMembership.CurrentUser().Id;
+                PictureGalery.IsActive = model.IsActive;
+                PictureGalery.Name = model.Name;
 
                 try
                 {
-                    _galeryService.Insert(galery);
+                    _PictureGaleryService.Insert(PictureGalery);
                     _uow.SaveChanges();
 
                     messagesForView.Clear();
@@ -76,36 +76,36 @@ namespace NewsSite.Web.Areas.Admin.Controllers
             return View(model);
         }
 
-        public ActionResult EditGalery(int id)
+        public ActionResult EditPictureGalery(int id)
         {
-            var model = new GaleryModel();
-            var galery = _galeryService.Find(id);
+            var model = new PictureGaleryModel();
+            var PictureGalery = _PictureGaleryService.Find(id);
 
-            model.Description = galery.Description;
-            model.Id = galery.Id;
-            model.IsActive = galery.IsActive;
-            model.Name = galery.Name;
+            model.Description = PictureGalery.Description;
+            model.Id = PictureGalery.Id;
+            model.IsActive = PictureGalery.IsActive;
+            model.Name = PictureGalery.Name;
 
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult EditGalery(GaleryModel model)
+        public ActionResult EditPictureGalery(PictureGaleryModel model)
         {
-            var galery = _galeryService.Find(model.Id);
+            var PictureGalery = _PictureGaleryService.Find(model.Id);
 
             if (ModelState.IsValid)
             {
-                galery.Description = model.Description;
-                galery.IsActive = model.IsActive;
-                galery.Name = model.Name;
-                galery.Slug = StringManager.ToSlug(model.Name);
-                galery.UpdateUserId = CustomMembership.CurrentUser().Id;
-                galery.UpdateDate = DateTime.Now;
+                PictureGalery.Description = model.Description;
+                PictureGalery.IsActive = model.IsActive;
+                PictureGalery.Name = model.Name;
+                PictureGalery.Slug = StringManager.ToSlug(model.Name);
+                PictureGalery.UpdateUserId = CustomMembership.CurrentUser().Id;
+                PictureGalery.UpdateDate = DateTime.Now;
 
                 try
                 {
-                    _galeryService.Update(galery);
+                    _PictureGaleryService.Update(PictureGalery);
                     _uow.SaveChanges();
 
                     messagesForView.Clear();
@@ -127,12 +127,12 @@ namespace NewsSite.Web.Areas.Admin.Controllers
             return View(model);
         }
 
-        public ActionResult DeleteGalery(int id)
+        public ActionResult DeletePictureGalery(int id)
         {
-            var galery = _galeryService.Find(id);
+            var PictureGalery = _PictureGaleryService.Find(id);
             try
             {
-                _galeryService.Delete(galery);
+                _PictureGaleryService.Delete(PictureGalery);
                 _uow.SaveChanges();
 
                 messagesForView.Clear();
@@ -152,33 +152,33 @@ namespace NewsSite.Web.Areas.Admin.Controllers
         }
         #endregion
 
-        #region galery images
-        public ActionResult GaleryImages(int galeryId)
+        #region PictureGalery images
+        public ActionResult Pictures(int PictureGaleryId)
         {
-            var galery = _galeryService.Find(galeryId);
-            var model = new GaleryImageModel();
+            var PictureGalery = _PictureGaleryService.Find(PictureGaleryId);
+            var model = new PictureModel();
 
-            model.Galery = galery;
+            model.PictureGalery = PictureGalery;
             model.Order = 0;
 
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult AddGaleryImage(GaleryImageModel model)
+        public ActionResult AddPicture(PictureModel model)
         {
             if (ModelState.IsValid)
             {
-                if (model.GaleryImg.ContentLength > 0)
+                if (model.PictureGaleryImg.ContentLength > 0)
                 {
-                    var image = model.GaleryImg;
+                    var image = model.PictureGaleryImg;
                     var fileName = Guid.NewGuid().ToString() + System.IO.Path.GetExtension(image.FileName);
-                    var imageDirectory = Server.MapPath("~/Content/Images/uploads/Galery/" + model.Galery.Id);
-                    var imageDirectorySmall = Server.MapPath("~/Content/Images/uploads/Galery/" + model.Galery.Id + "/Small");
-                    var imageDirectoryMiddle = Server.MapPath("~/Content/Images/uploads/Galery/" + model.Galery.Id + "/Middle");
-                    var imageDirectoryBig = Server.MapPath("~/Content/Images/uploads/Galery/" + model.Galery.Id + "/Big");
+                    var imageDirectory = Server.MapPath("~/Content/Images/uploads/PictureGalery/" + model.PictureGalery.Id);
+                    var imageDirectorySmall = Server.MapPath("~/Content/Images/uploads/PictureGalery/" + model.PictureGalery.Id + "/Small");
+                    var imageDirectoryMiddle = Server.MapPath("~/Content/Images/uploads/PictureGalery/" + model.PictureGalery.Id + "/Middle");
+                    var imageDirectoryBig = Server.MapPath("~/Content/Images/uploads/PictureGalery/" + model.PictureGalery.Id + "/Big");
 
-                    // dizin yoksa oluştur.
+                    // create directory if not exist
                     if (!Directory.Exists(imageDirectory))
                     {
                         Directory.CreateDirectory(imageDirectory);
@@ -195,24 +195,24 @@ namespace NewsSite.Web.Areas.Admin.Controllers
                     ImageManager.SaveResizedImage(Image.FromFile(Path.Combine(imageDirectory, fileName)), new Size(360, 360), imageDirectoryMiddle, fileName);
                     ImageManager.SaveResizedImage(Image.FromFile(Path.Combine(imageDirectory, fileName)), new Size(720, 720), imageDirectoryBig, fileName);
 
-                    var galeryImage = new GaleryImage();
+                    var Picture = new Picture();
 
-                    galeryImage.ContentSize = image.ContentLength;
-                    galeryImage.ContentType = image.ContentType;
-                    galeryImage.FileName = fileName;
-                    galeryImage.GaleryId = model.Galery.Id;
-                    galeryImage.InsertDate = DateTime.Now;
-                    galeryImage.InsertUserId = CustomMembership.CurrentUser().Id;
-                    galeryImage.IsActive = true;
-                    galeryImage.Order = model.Order;
-                    galeryImage.ImgUrl = Path.Combine("Content/Images/uploads/Galery/" + model.Galery.Id, fileName);
-                    galeryImage.ImgUrlSmall = Path.Combine("Content/Images/uploads/Galery/" + model.Galery.Id + "/Small", fileName);
-                    galeryImage.ImgUrlMiddle = Path.Combine("Content/Images/uploads/Galery/" + model.Galery.Id + "/Middle", fileName);
-                    galeryImage.ImgUrlBig = Path.Combine("Content/Images/uploads/Galery/" + model.Galery.Id + "/Big", fileName);
+                    Picture.ContentSize = image.ContentLength;
+                    Picture.ContentType = image.ContentType;
+                    Picture.FileName = fileName;
+                    Picture.PictureGaleryId = model.PictureGalery.Id;
+                    Picture.InsertDate = DateTime.Now;
+                    Picture.InsertUserId = CustomMembership.CurrentUser().Id;
+                    Picture.IsActive = true;
+                    Picture.Order = model.Order;
+                    Picture.ImgUrl = Path.Combine("Content/Images/uploads/PictureGalery/" + model.PictureGalery.Id, fileName);
+                    Picture.ImgUrlSmall = Path.Combine("Content/Images/uploads/PictureGalery/" + model.PictureGalery.Id + "/Small", fileName);
+                    Picture.ImgUrlMiddle = Path.Combine("Content/Images/uploads/PictureGalery/" + model.PictureGalery.Id + "/Middle", fileName);
+                    Picture.ImgUrlBig = Path.Combine("Content/Images/uploads/PictureGalery/" + model.PictureGalery.Id + "/Big", fileName);
 
                     try
                     {
-                        _galeryService.Insert(galeryImage);
+                        _PictureGaleryService.Insert(Picture);
                         _uow.SaveChanges();
 
                         messagesForView.Clear();
@@ -230,18 +230,18 @@ namespace NewsSite.Web.Areas.Admin.Controllers
                 }
             }
 
-            return RedirectToAction("GaleryImages", new { galeryId = model.Galery.Id });
+            return RedirectToAction("Pictures", new { PictureGaleryId = model.PictureGalery.Id });
         }
 
-        public ActionResult DeleteGaleryImage(int id)
+        public ActionResult DeletePicture(int id)
         {
-            var galeryImage = _galeryService.FindGaleryImage(id);
-            var model = new GaleryImageModel();
-            model.Galery = galeryImage.Galery;
+            var Picture = _PictureGaleryService.FindPicture(id);
+            var model = new PictureModel();
+            model.PictureGalery = Picture.PictureGalery;
 
             try
             {
-                _galeryService.Delete(galeryImage);
+                _PictureGaleryService.Delete(Picture);
                 _uow.SaveChanges();
 
                 messagesForView.Clear();
@@ -257,7 +257,7 @@ namespace NewsSite.Web.Areas.Admin.Controllers
                 Error(messagesForView);
             }
 
-            return View("GaleryImages", model);
+            return View("Pictures", model);
         }
         #endregion
     }

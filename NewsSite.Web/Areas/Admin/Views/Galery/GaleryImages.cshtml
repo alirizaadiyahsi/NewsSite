@@ -1,17 +1,17 @@
-﻿@model NewsSite.Web.Areas.Admin.Models.GaleryImageModel
+﻿@model NewsSite.Web.Areas.Admin.Models.PictureModel
 
 @{
-    ViewBag.Title = Model.Galery.Name + " - Resimler";
+    ViewBag.Title = Model.PictureGalery.Name + " - Resimler";
 }
 
-@using (Html.BeginForm("AddGaleryImage", "Galery", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-inline" }))
+@using (Html.BeginForm("AddPicture", "PictureGalery", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-inline" }))
 {
-    @Html.HiddenFor(x => x.Galery.Id)
+    @Html.HiddenFor(x => x.PictureGalery.Id)
     <div class="form-group">
-        @Html.LabelFor(model => model.GaleryImg, htmlAttributes: new { @class = "sr-only" })
+        @Html.LabelFor(model => model.PictureGaleryImg, htmlAttributes: new { @class = "sr-only" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.GaleryImg, "_" + NewsSite.Core.Application.Keys.HttpPostedFileBase, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.GaleryImg, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.PictureGaleryImg, "_" + NewsSite.Core.Application.Keys.HttpPostedFileBase, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PictureGaleryImg, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="form-group">
@@ -26,18 +26,18 @@
 <hr />
 
 @using GridMvc.Html
-@Html.Grid(Model.Galery.GaleryImages).Columns(columns =>
+@Html.Grid(Model.PictureGalery.Pictures).Columns(columns =>
 {
     columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Edit(x));
     columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Image(x));
 }).WithPaging(20)
 
-@helper Edit(NewsSite.Core.Database.Tables.GaleryImage galeryImage)
+@helper Edit(NewsSite.Core.Database.Tables.Picture Picture)
 {
-    <a href='@Url.Action("DeleteGaleryImage", "Galery", new { id = galeryImage.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+    <a href='@Url.Action("DeletePicture", "PictureGalery", new { id = Picture.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
 }
 
-@helper Image(NewsSite.Core.Database.Tables.GaleryImage galeryImage)
+@helper Image(NewsSite.Core.Database.Tables.Picture Picture)
 {
-    <img src="~/@galeryImage.ImgUrlSmall" alt="@Model.Galery.Name" class="img-rounded">
+    <img src="~/@Picture.ImgUrlSmall" alt="@Model.PictureGalery.Name" class="img-rounded">
 }

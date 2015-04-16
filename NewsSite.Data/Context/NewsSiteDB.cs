@@ -16,8 +16,8 @@ namespace NewsSite.Data.Context
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
-        public virtual DbSet<Galery> Galery { get; set; }
-        public virtual DbSet<GaleryImage> GaleryImage { get; set; }
+        public virtual DbSet<PictureGalery> PictureGalery { get; set; }
+        public virtual DbSet<Picture> Picture { get; set; }
         public virtual DbSet<Post> Post { get; set; }
         public virtual DbSet<PostPosition> PostPosition { get; set; }
 

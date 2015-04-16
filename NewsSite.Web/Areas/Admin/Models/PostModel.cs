@@ -40,10 +40,10 @@ namespace NewsSite.Web.Areas.Admin.Models
         public List<string> ListTagNames { get; set; }
 
         [DisplayName("Galeriler")]
-        public List<int> SelectedGaleryIds { get; set; }
+        public List<int> SelectedPictureGaleryIds { get; set; }
 
         public IEnumerable<PostPosition> Positions { get; set; }
-        public IEnumerable<Galery> Galeries { get; set; }
+        public IEnumerable<PictureGalery> Galeries { get; set; }
         public IEnumerable<User> Authors { get; set; }
         public IEnumerable<Category> Categories { get; set; }
         public string ImgUrl { get; set; }

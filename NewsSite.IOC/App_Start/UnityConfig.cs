@@ -3,7 +3,7 @@ using NewsSite.Core.Database.Tables;
 using NewsSite.Data.Repository;
 using NewsSite.Data.UnitOfWork;
 using NewsSite.Service.CategoryServices;
-using NewsSite.Service.GaleryServices;
+using NewsSite.Service.PictureGaleryServices;
 using NewsSite.Service.MembershipServices;
 using NewsSite.Service.PostServices;
 using NewsSite.Service.TagServices;
@@ -33,7 +33,7 @@ namespace NewsSite.IOC
             container.BindInRequestScope<IGenericRepository<Role>, GenericRepository<Role>>();
             container.BindInRequestScope<IGenericRepository<Category>, GenericRepository<Category>>();
             container.BindInRequestScope<IGenericRepository<Tag>, GenericRepository<Tag>>();
-            container.BindInRequestScope<IGenericRepository<Galery>, GenericRepository<Galery>>();
+            container.BindInRequestScope<IGenericRepository<PictureGalery>, GenericRepository<PictureGalery>>();
             container.BindInRequestScope<IGenericRepository<Post>, GenericRepository<Post>>();
             container.BindInRequestScope<IGenericRepository<PostPosition>, GenericRepository<PostPosition>>();
 
@@ -42,7 +42,7 @@ namespace NewsSite.IOC
             container.BindInRequestScope<IMembershipService, MembershipService>();
             container.BindInRequestScope<ICategoryService, CategoryService>();
             container.BindInRequestScope<ITagService, TagService>();
-            container.BindInRequestScope<IGaleryService, GaleryService>();
+            container.BindInRequestScope<IPictureGaleryService, PictureGaleryService>();
             container.BindInRequestScope<IPostService, PostService>();
         }
     }

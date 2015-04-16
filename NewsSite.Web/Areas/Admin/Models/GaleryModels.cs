@@ -6,20 +6,20 @@ using System.Web;
 
 namespace NewsSite.Web.Areas.Admin.Models
 {
-    public class GaleryModel : BaseViewModel
+    public class PictureGaleryModel : BaseViewModel
     {
         [DisplayName("Galeri")]
         public string Name { get; set; }
     }
 
-    public class GaleryImageModel : BaseViewModel
+    public class PictureModel : BaseViewModel
     {
         [Required(ErrorMessage = "{0} alanı gereklidir!")]
-        public HttpPostedFileBase GaleryImg { get; set; }
+        public HttpPostedFileBase PictureGaleryImg { get; set; }
 
         [DisplayName("Sıra")]
         public int Order { get; set; }
 
-        public Galery Galery { get; set; }
+        public PictureGalery PictureGalery { get; set; }
     }
 }

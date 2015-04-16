@@ -4,7 +4,7 @@ using System.Web.Mvc;
 
 namespace NewsSite.Web.Areas.Admin.Controllers
 {
-    public class DashboardController : AdminController
+    public class DashboardController : PublicController
     {
         public DashboardController(IUnitOfWork uow)
             : base(uow)

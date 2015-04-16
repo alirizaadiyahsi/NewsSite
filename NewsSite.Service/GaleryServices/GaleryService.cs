@@ -7,68 +7,68 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewsSite.Service.GaleryServices
+namespace NewsSite.Service.PictureGaleryServices
 {
-    public class GaleryService : IGaleryService
+    public class PictureGaleryService : IPictureGaleryService
     {
-        private readonly IGenericRepository<Galery> _galeryRepository;
-        private readonly IGenericRepository<GaleryImage> _galeryImageRepository;
+        private readonly IGenericRepository<PictureGalery> _PictureGaleryRepository;
+        private readonly IGenericRepository<Picture> _PictureRepository;
 
-        public GaleryService(IUnitOfWork uow)
+        public PictureGaleryService(IUnitOfWork uow)
         {
-            _galeryRepository = uow.GetRepository<Galery>();
-            _galeryImageRepository = uow.GetRepository<GaleryImage>();
+            _PictureGaleryRepository = uow.GetRepository<PictureGalery>();
+            _PictureRepository = uow.GetRepository<Picture>();
         }
 
-        public IQueryable<Galery> GetAll()
+        public IQueryable<PictureGalery> GetAll()
         {
-            return _galeryRepository.GetAll();
+            return _PictureGaleryRepository.GetAll();
         }
 
-        public Galery Find(int id)
+        public PictureGalery Find(int id)
         {
-            return _galeryRepository.Find(id);
+            return _PictureGaleryRepository.Find(id);
         }
 
-        public void Insert(Galery galery)
+        public void Insert(PictureGalery PictureGalery)
         {
-            _galeryRepository.Insert(galery);
+            _PictureGaleryRepository.Insert(PictureGalery);
         }
 
-        public void Update(Galery galery)
+        public void Update(PictureGalery PictureGalery)
         {
-            _galeryRepository.Update(galery);
+            _PictureGaleryRepository.Update(PictureGalery);
         }
 
-        public void Delete(Galery galery)
+        public void Delete(PictureGalery PictureGalery)
         {
-            _galeryRepository.Delete(galery);
+            _PictureGaleryRepository.Delete(PictureGalery);
         }
 
 
-        public IQueryable<GaleryImage> GetGaleryImages(int galeryId)
+        public IQueryable<Picture> GetPictures(int PictureGaleryId)
         {
-            return _galeryImageRepository.GetAll().Where(x => x.GaleryId == galeryId);
+            return _PictureRepository.GetAll().Where(x => x.PictureGaleryId == PictureGaleryId);
         }
 
-        public void Insert(GaleryImage galeryImage)
+        public void Insert(Picture Picture)
         {
-            _galeryImageRepository.Insert(galeryImage);
+            _PictureRepository.Insert(Picture);
         }
 
-        public void Update(GaleryImage galeryImage)
+        public void Update(Picture Picture)
         {
-            _galeryImageRepository.Update(galeryImage);
+            _PictureRepository.Update(Picture);
         }
 
-        public void Delete(GaleryImage galeryImage)
+        public void Delete(Picture Picture)
         {
-            _galeryImageRepository.Delete(galeryImage);
+            _PictureRepository.Delete(Picture);
         }
 
-        public GaleryImage FindGaleryImage(int id)
+        public Picture FindPicture(int id)
         {
-            return _galeryImageRepository.Find(id);
+            return _PictureRepository.Find(id);
         }
     }
 }

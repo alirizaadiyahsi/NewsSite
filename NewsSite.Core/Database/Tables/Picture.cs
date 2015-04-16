@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NewsSite.Core.Database.Tables
 {
-    public class GaleryImage : BaseEntity
+    public class Picture : BaseEntity
     {
         public string ImgUrl { get; set; }
         public string ImgUrlSmall { get; set; }
@@ -16,8 +16,8 @@ namespace NewsSite.Core.Database.Tables
         public int ContentSize { get; set; }
         public string ContentType { get; set; }
         public string FileName { get; set; }
-        public int GaleryId { get; set; }
+        public int PictureGaleryId { get; set; }
 
-        public virtual Galery Galery { get; set; }
+        public virtual PictureGalery PictureGalery { get; set; }
     }
 }

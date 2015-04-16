@@ -24,8 +24,10 @@ namespace NewsSite.Web
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/maincss").Include(
-                      "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/bootstrapcss").Include(
+                      "~/Content/bootstrap.css"));
         }
     }
 }

@@ -10,28 +10,28 @@ using NewsSite.Web.Areas.Admin.Models;
 using NewsSite.Core.Database.Tables;
 using NewsSite.Service.CategoryServices;
 using NewsSite.Service.TagServices;
-using NewsSite.Service.GaleryServices;
+using NewsSite.Service.PictureGaleryServices;
 using System.IO;
 using System.Drawing;
 using NewsSite.Service.MembershipServices;
 
 namespace NewsSite.Web.Areas.Admin.Controllers
 {
-    public class PostController : AdminController
+    public class PostController : PublicController
     {
         private readonly IPostService _postService;
         private readonly ICategoryService _categoryService;
         private readonly ITagService _tagService;
-        private readonly IGaleryService _galeryService;
+        private readonly IPictureGaleryService _PictureGaleryService;
         private readonly IMembershipService _membershipService;
 
-        public PostController(IUnitOfWork uow, IPostService postService, ICategoryService categoryService, ITagService tagService, IGaleryService galeryService, IMembershipService membershipService)
+        public PostController(IUnitOfWork uow, IPostService postService, ICategoryService categoryService, ITagService tagService, IPictureGaleryService PictureGaleryService, IMembershipService membershipService)
             : base(uow)
         {
             _postService = postService;
             _categoryService = categoryService;
             _tagService = tagService;
-            _galeryService = galeryService;
+            _PictureGaleryService = PictureGaleryService;
             _membershipService = membershipService;
         }
 
@@ -49,7 +49,7 @@ namespace NewsSite.Web.Areas.Admin.Controllers
             model.Categories = _categoryService.GetAll();
             model.ListTagNames = _tagService.GetAll().Select(x => x.Name).ToList();
             model.Positions = _postService.GetAllPositions();
-            model.Galeries = _galeryService.GetAll();
+            model.Galeries = _PictureGaleryService.GetAll();
             model.Authors = _membershipService.GetAllUsers();
 
             return View(model);
@@ -106,9 +106,9 @@ namespace NewsSite.Web.Areas.Admin.Controllers
                     post.TagNames = model.TagNames;
                     post.Title = model.Title;
 
-                    foreach (var galeryId in model.SelectedGaleryIds)
+                    foreach (var PictureGaleryId in model.SelectedPictureGaleryIds)
                     {
-                        post.Galeries.Add(_galeryService.Find(galeryId));
+                        post.Galeries.Add(_PictureGaleryService.Find(PictureGaleryId));
                     }
 
                     var selectedTagNames = model.TagNames.Split(',');
@@ -163,7 +163,7 @@ namespace NewsSite.Web.Areas.Admin.Controllers
             model.Categories = _categoryService.GetAll();
             // tagnames yukarıda set ediliyor...
             model.Positions = _postService.GetAllPositions();
-            model.Galeries = _galeryService.GetAll();
+            model.Galeries = _PictureGaleryService.GetAll();
             model.Authors = _membershipService.GetAllUsers();
 
             return View(model);
@@ -180,14 +180,14 @@ namespace NewsSite.Web.Areas.Admin.Controllers
             model.CategoryId = post.CategoryId;
             model.Content = post.Content;
             model.Description = post.Description;
-            model.Galeries = _galeryService.GetAll();
+            model.Galeries = _PictureGaleryService.GetAll();
             model.Id = post.Id;
             model.ImgUrl = post.ImgUrlSmall;
             model.IsActive = post.IsActive;
             model.ListTagNames = _tagService.GetAll().Select(x => x.Name).ToList();
             model.PositionId = post.PostPositionId;
             model.Positions = _postService.GetAllPositions();
-            model.SelectedGaleryIds = post.Galeries.Select(x => x.Id).ToList();
+            model.SelectedPictureGaleryIds = post.Galeries.Select(x => x.Id).ToList();
             model.Source = post.Source;
             model.TagNames = post.TagNames;
             model.Title = post.Title;
@@ -250,9 +250,9 @@ namespace NewsSite.Web.Areas.Admin.Controllers
                 post.UpdateUserId = CustomMembership.CurrentUser().Id;
 
                 post.Galeries.Clear();
-                foreach (var galeryId in model.SelectedGaleryIds)
+                foreach (var PictureGaleryId in model.SelectedPictureGaleryIds)
                 {
-                    post.Galeries.Add(_galeryService.Find(galeryId));
+                    post.Galeries.Add(_PictureGaleryService.Find(PictureGaleryId));
                 }
 
                 var selectedTagNames = model.TagNames.Split(',');
@@ -308,7 +308,7 @@ namespace NewsSite.Web.Areas.Admin.Controllers
             model.Categories = _categoryService.GetAll();
             // tagnames yukarıda set ediliyor...
             model.Positions = _postService.GetAllPositions();
-            model.Galeries = _galeryService.GetAll();
+            model.Galeries = _PictureGaleryService.GetAll();
             model.Authors = _membershipService.GetAllUsers();
 
             return View(model);

@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace NewsSite.Web.Areas.Admin.Controllers
 {
-    public class CategoryController : AdminController
+    public class CategoryController : PublicController
     {
         private readonly ICategoryService _categoryService;
 

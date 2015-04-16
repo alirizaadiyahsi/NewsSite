@@ -5,7 +5,7 @@ namespace NewsSite.Core.Database.Tables
     {
         public Post()
         {
-            Galeries = new HashSet<Galery>();
+            Galeries = new HashSet<PictureGalery>();
             Tags = new HashSet<Tag>();
         }
 
@@ -27,7 +27,7 @@ namespace NewsSite.Core.Database.Tables
         public virtual Category Category { get; set; }
         public virtual PostPosition PostPosition { get; set; }
 
-        public virtual ICollection<Galery> Galeries { get; set; }
+        public virtual ICollection<PictureGalery> Galeries { get; set; }
         public virtual ICollection<Tag> Tags { get; set; }
     }
 }

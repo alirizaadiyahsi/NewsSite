@@ -5,20 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewsSite.Service.GaleryServices
+namespace NewsSite.Service.PictureGaleryServices
 {
-   public interface IGaleryService
+   public interface IPictureGaleryService
     {
-       IQueryable<Galery> GetAll();
-       Galery Find(int id);
-       void Insert(Galery galery);
-       void Update(Galery galery);
-       void Delete(Galery galery);
+       IQueryable<PictureGalery> GetAll();
+       PictureGalery Find(int id);
+       void Insert(PictureGalery PictureGalery);
+       void Update(PictureGalery PictureGalery);
+       void Delete(PictureGalery PictureGalery);
 
-       IQueryable<GaleryImage> GetGaleryImages(int galeryId);
-       GaleryImage FindGaleryImage(int id);
-       void Insert(GaleryImage galeryImage);
-       void Update(GaleryImage galeryImage);
-       void Delete(GaleryImage galeryImage);
+       IQueryable<Picture> GetPictures(int PictureGaleryId);
+       Picture FindPicture(int id);
+       void Insert(Picture Picture);
+       void Update(Picture Picture);
+       void Delete(Picture Picture);
     }
 }
