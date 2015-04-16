@@ -30,6 +30,9 @@ Note: You should add admin user and admin role manually that roleName should be 
 
 ![alt tag](http://n04.imgup.net/Capture2bab4.PNG)
 
+![alt tag](http://i18.imgup.net/Capture97b7.PNG)
+
+
 License
 ----
 
