@@ -1,7 +1,7 @@
 ﻿@model NewsSite.Web.Areas.Admin.Models.CategoryModel
 
 @{
-    ViewBag.Title = "Kategori Ekle";
+    ViewBag.Title = "Edit Category";
 }
 
 @using (Html.BeginForm())
@@ -10,7 +10,7 @@
     @Html.HiddenFor(x => x.Id)
 
     <div class="form-horizontal">
-        <h4>Kategori Ekle</h4>
+        <h4>Edit Category</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

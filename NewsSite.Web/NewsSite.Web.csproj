@@ -58,6 +58,9 @@
     <Reference Include="GridMvc">
       <HintPath>..\packages\Grid.Mvc.3.0.0\lib\net40\GridMvc.dll</HintPath>
     </Reference>
+    <Reference Include="Insya.Localization">
+      <HintPath>..\packages\Localization.1.0.7\lib\net40\Insya.Localization.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -168,6 +171,7 @@
     <Compile Include="Controllers\HomeController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controllers\LocalesController.cs" />
     <Compile Include="Controllers\PostController.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -507,6 +511,8 @@
     <Content Include="Content\images\uploads\Post\Small\fb2a5682-a086-42e5-b043-868b5a94e661.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Icon.png" />
+    <Content Include="Localization\en_US.xml" />
+    <Content Include="Localization\tr_TR.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ckfinder\_source\AssemblyInfo.cs" />

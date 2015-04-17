@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lang>
+	<item id="lng">TR</item>
+	<item id="lngLNG">tr-TR</item>
+	<item id="lngName">Türkçe</item>
+	<item id="charset">UTF-8</item>
+	<item id="dir">ltr</item>
+	<item id="changelng">Dili Değiştir</item>
+	<item id="changedlng">Dil değiştirildi</item>
+  
+	<item id="displayName">Ad Soyad</item>
+	<item id="stringLength">{0} için girilen değer {2} karakterden kısa olamaz.</item>
+	<item id="required">Bu alan gerekli</item>
+	<item id="description">Açıklama</item>
+
+	<item id="homepage">Anasayfa</item>
+</lang>

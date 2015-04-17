@@ -1,10 +1,10 @@
 ﻿@model IQueryable<NewsSite.Core.Database.Tables.Category>
 
 @{
-    ViewBag.Title = "Kategoriler";
+    ViewBag.Title = "Categories";
 }
 
-<a href='@Url.Action("AddCategory", "Category")' class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Yeni Kategori</a>
+<a href='@Url.Action("AddCategory", "Category")' class="btn btn-primary"><i class="fa fa-plus fa-fw"></i>New Category</a>
 <hr />
 
 @using GridMvc.Html
@@ -21,5 +21,5 @@
 @helper Edit(NewsSite.Core.Database.Tables.Category category)
 {
     <a href='@Url.Action("EditCategory", "Category", new { id = category.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
-    <a href='@Url.Action("DeleteCategory", "Category", new { id = category.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+    <a href='@Url.Action("DeleteCategory", "Category", new { id = category.Id })' onclick="return confirm('Are you sure you want to delete?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
 }
