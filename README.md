@@ -3,7 +3,7 @@
 NewsSite is basic news/magazine site. NewsSite use .net (c#, asp.net mvc (mvc5), entitiy framework codefirst (latest version)) and other web development technologies (html, css, js/jquery). 
 
 ### Version
-1.0.0.1
+BETA
 
 ### Tech
 
