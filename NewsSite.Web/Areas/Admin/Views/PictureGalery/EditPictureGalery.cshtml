@@ -1,7 +1,7 @@
 ﻿@model NewsSite.Web.Areas.Admin.Models.PictureGaleryModel
 
 @{
-    ViewBag.Title = "Galeri Düzenle";
+    ViewBag.Title = Resource.EditGalery;
 }
 
 @using (Html.BeginForm())
@@ -10,7 +10,7 @@
     @Html.HiddenFor(x => x.Id)
 
     <div class="form-horizontal">
-        <h4>Galeri Düzenle</h4>
+        <h4>@Resource.EditGalery</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -41,8 +41,8 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Kaydet" class="btn btn-primary" />
-                <a href='@Url.Action("Index")' class="btn btn-default">Listeye geri dön</a>
+                <input type="submit" value="@Resource.Save" class="btn btn-primary" />
+                <a href='@Url.Action("Index")' class="btn btn-default">@Resource.ReturnToList</a>
             </div>
         </div>
     </div>

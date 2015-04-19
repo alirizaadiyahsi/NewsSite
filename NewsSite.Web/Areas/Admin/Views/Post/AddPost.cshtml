@@ -1,7 +1,7 @@
 ﻿@model NewsSite.Web.Areas.Admin.Models.PostModel
 
 @{
-    ViewBag.Title = "Haber Ekle";
+    ViewBag.Title = Resource.NewPost;
 }
 
 <script>
@@ -19,7 +19,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Haber Ekle</h4>
+        <h4>@Resource.NewPost</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -59,7 +59,7 @@
             @Html.LabelFor(model => model.CategoryId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.CategoryId,
-                new SelectList(Model.Categories, "Id", "Name"), "--- Kategori Seçiniz ---",
+                new SelectList(Model.Categories, "Id", "Name"), "--- "+Resource.SelectCategory+" ---",
                 new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
             </div>
@@ -69,7 +69,7 @@
             @Html.LabelFor(model => model.PositionId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.PositionId,
-                new SelectList(Model.Positions, "Id", "Name"), "--- Pozisyon Seçiniz ---",
+                new SelectList(Model.Positions, "Id", "Name"), "--- "+Resource.SelectPosition+" ---",
                 new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PositionId, "", new { @class = "text-danger" })
             </div>
@@ -80,7 +80,7 @@
             <div class="col-md-10">
                 @Html.ListBoxFor(model => model.SelectedPictureGaleryIds,
                 new SelectList(Model.Galeries, "Id", "Name"),
-                new { @class = "select2-multi-select", data_placeholder = "Galeriler..." })
+                new { @class = "select2-multi-select", data_placeholder = Resource.Galeries+"..." })
                 @Html.ValidationMessageFor(model => model.SelectedPictureGaleryIds, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -88,7 +88,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TagNames, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TagNames, new { htmlAttributes = new { @class = "select2-tag-select", data_placeholder = "Etiketler..." } })
+                @Html.EditorFor(model => model.TagNames, new { htmlAttributes = new { @class = "select2-tag-select", data_placeholder = Resource.Tags+"..." } })
                 @Html.ValidationMessageFor(model => model.TagNames, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -97,7 +97,7 @@
             @Html.LabelFor(model => model.AuthorId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.AuthorId,
-                new SelectList(Model.Authors, "Id", "UserName"), "--- Yazar Seçiniz ---",
+                new SelectList(Model.Authors, "Id", "UserName"), "--- "+Resource.SelectAuthor+" ---",
                 new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.AuthorId, "", new { @class = "text-danger" })
             </div>
@@ -115,8 +115,8 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Kaydet" class="btn btn-primary" />
-                <a href='@Url.Action("Index")' class="btn btn-default">Listeye geri dön</a>
+                <input type="submit" value="@Resource.Save" class="btn btn-primary" />
+                <a href='@Url.Action("Index")' class="btn btn-default">@Resource.ReturnToList</a>
             </div>
         </div>
     </div>

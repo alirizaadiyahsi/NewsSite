@@ -141,7 +141,7 @@
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Areas\Admin\Controllers\GaleryController.cs">
+    <Compile Include="Areas\Admin\Controllers\PictureGaleryController.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Areas\Admin\Controllers\PostController.cs">
@@ -355,10 +355,10 @@
     <Content Include="Areas\Admin\Views\Category\EditCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Galery\AddGalery.cshtml" />
-    <Content Include="Areas\Admin\Views\Galery\EditGalery.cshtml" />
-    <Content Include="Areas\Admin\Views\Galery\GaleryImages.cshtml" />
-    <Content Include="Areas\Admin\Views\Galery\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PictureGalery\AddPictureGalery.cshtml" />
+    <Content Include="Areas\Admin\Views\PictureGalery\EditPictureGalery.cshtml" />
+    <Content Include="Areas\Admin\Views\PictureGalery\Pictures.cshtml" />
+    <Content Include="Areas\Admin\Views\PictureGalery\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Post\AddPost.cshtml" />
     <Content Include="Areas\Admin\Views\Post\EditPost.cshtml" />
     <Content Include="Areas\Admin\Views\Post\Index.cshtml" />

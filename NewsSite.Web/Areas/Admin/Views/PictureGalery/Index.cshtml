@@ -1,0 +1,26 @@
+﻿@model IQueryable<NewsSite.Core.Database.Tables.PictureGalery>
+
+@{
+    ViewBag.Title = Resource.Galeries;
+}
+
+<a href='@Url.Action("AddPictureGalery", "PictureGalery")' class="btn btn-primary"><i class="fa fa-plus fa-fw"></i>@Resource.NewGalery</a>
+<hr />
+
+@using GridMvc.Html
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Edit(x));
+    columns.Add(column => column.Name).Titled(Resource.Galery).Sortable(true);
+    columns.Add(column => column.Description).Titled(Resource.Description).Sortable(true);
+    columns.Add(column => column.IsActive).Titled(Resource.Active).Sortable(true);
+    columns.Add(column => column.Slug).Titled("Seo").Sortable(true);
+    columns.Add(column => column.Pictures.Count).Titled(Resource.PictureCount).Sortable(true);
+}).WithPaging(20)
+
+@helper Edit(NewsSite.Core.Database.Tables.PictureGalery PictureGalery)
+{
+    <a href='@Url.Action("Pictures", "PictureGalery", new { PictureGaleryId = PictureGalery.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-camera"></span></a>
+    <a href='@Url.Action("EditPictureGalery", "PictureGalery", new { id = PictureGalery.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href='@Url.Action("DeletePictureGalery", "PictureGalery", new { id = PictureGalery.Id })' onclick="return confirm('@Resource.DeleteConfirmation')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+}

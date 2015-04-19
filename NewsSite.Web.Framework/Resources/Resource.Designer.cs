@@ -79,6 +79,42 @@ namespace NewsSite.Web.Framework.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Galery.
+        /// </summary>
+        public static string AddGalery {
+            get {
+                return ResourceManager.GetString("AddGalery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Picture.
+        /// </summary>
+        public static string AddPicture {
+            get {
+                return ResourceManager.GetString("AddPicture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Post.
+        /// </summary>
+        public static string AddPost {
+            get {
+                return ResourceManager.GetString("AddPost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Tag.
+        /// </summary>
+        public static string AddTag {
+            get {
+                return ResourceManager.GetString("AddTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
@@ -133,11 +169,155 @@ namespace NewsSite.Web.Framework.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit Galery.
+        /// </summary>
+        public static string EditGalery {
+            get {
+                return ResourceManager.GetString("EditGalery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Picture.
+        /// </summary>
+        public static string EditPicture {
+            get {
+                return ResourceManager.GetString("EditPicture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Post.
+        /// </summary>
+        public static string EditPost {
+            get {
+                return ResourceManager.GetString("EditPost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Tag.
+        /// </summary>
+        public static string EditTag {
+            get {
+                return ResourceManager.GetString("EditTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Galeries.
+        /// </summary>
+        public static string Galeries {
+            get {
+                return ResourceManager.GetString("Galeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Galery.
+        /// </summary>
+        public static string Galery {
+            get {
+                return ResourceManager.GetString("Galery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Category.
+        /// </summary>
+        public static string NewCategory {
+            get {
+                return ResourceManager.GetString("NewCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Galery.
+        /// </summary>
+        public static string NewGalery {
+            get {
+                return ResourceManager.GetString("NewGalery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Picture.
+        /// </summary>
+        public static string NewPicture {
+            get {
+                return ResourceManager.GetString("NewPicture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Post.
+        /// </summary>
+        public static string NewPost {
+            get {
+                return ResourceManager.GetString("NewPost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Tag.
+        /// </summary>
+        public static string NewTag {
+            get {
+                return ResourceManager.GetString("NewTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Order.
         /// </summary>
         public static string Order {
             get {
                 return ResourceManager.GetString("Order", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Picture.
+        /// </summary>
+        public static string Picture {
+            get {
+                return ResourceManager.GetString("Picture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Picture Count.
+        /// </summary>
+        public static string PictureCount {
+            get {
+                return ResourceManager.GetString("PictureCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pictures.
+        /// </summary>
+        public static string Pictures {
+            get {
+                return ResourceManager.GetString("Pictures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post.
+        /// </summary>
+        public static string Post {
+            get {
+                return ResourceManager.GetString("Post", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posts.
+        /// </summary>
+        public static string Posts {
+            get {
+                return ResourceManager.GetString("Posts", resourceCulture);
             }
         }
         
@@ -160,11 +340,74 @@ namespace NewsSite.Web.Framework.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Author.
+        /// </summary>
+        public static string SelectAuthor {
+            get {
+                return ResourceManager.GetString("SelectAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Category.
+        /// </summary>
+        public static string SelectCategory {
+            get {
+                return ResourceManager.GetString("SelectCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Position.
+        /// </summary>
+        public static string SelectPosition {
+            get {
+                return ResourceManager.GetString("SelectPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag.
+        /// </summary>
+        public static string Tag {
+            get {
+                return ResourceManager.GetString("Tag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tags.
+        /// </summary>
+        public static string Tags {
+            get {
+                return ResourceManager.GetString("Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update.
         /// </summary>
         public static string Update {
             get {
                 return ResourceManager.GetString("Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload.
+        /// </summary>
+        public static string Upload {
+            get {
+                return ResourceManager.GetString("Upload", resourceCulture);
             }
         }
     }

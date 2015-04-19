@@ -123,6 +123,18 @@
   <data name="AddCategory" xml:space="preserve">
     <value>Add Category</value>
   </data>
+  <data name="AddGalery" xml:space="preserve">
+    <value>Add Galery</value>
+  </data>
+  <data name="AddPicture" xml:space="preserve">
+    <value>Add Picture</value>
+  </data>
+  <data name="AddPost" xml:space="preserve">
+    <value>Add Post</value>
+  </data>
+  <data name="AddTag" xml:space="preserve">
+    <value>Add Tag</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -141,8 +153,56 @@
   <data name="EditCategory" xml:space="preserve">
     <value>Edit Category</value>
   </data>
+  <data name="EditGalery" xml:space="preserve">
+    <value>Edit Galery</value>
+  </data>
+  <data name="EditPicture" xml:space="preserve">
+    <value>Edit Picture</value>
+  </data>
+  <data name="EditPost" xml:space="preserve">
+    <value>Edit Post</value>
+  </data>
+  <data name="EditTag" xml:space="preserve">
+    <value>Edit Tag</value>
+  </data>
+  <data name="Galeries" xml:space="preserve">
+    <value>Galeries</value>
+  </data>
+  <data name="Galery" xml:space="preserve">
+    <value>Galery</value>
+  </data>
+  <data name="NewCategory" xml:space="preserve">
+    <value>New Category</value>
+  </data>
+  <data name="NewGalery" xml:space="preserve">
+    <value>New Galery</value>
+  </data>
+  <data name="NewPicture" xml:space="preserve">
+    <value>New Picture</value>
+  </data>
+  <data name="NewPost" xml:space="preserve">
+    <value>New Post</value>
+  </data>
+  <data name="NewTag" xml:space="preserve">
+    <value>New Tag</value>
+  </data>
   <data name="Order" xml:space="preserve">
     <value>Order</value>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="PictureCount" xml:space="preserve">
+    <value>Picture Count</value>
+  </data>
+  <data name="Pictures" xml:space="preserve">
+    <value>Pictures</value>
+  </data>
+  <data name="Post" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="Posts" xml:space="preserve">
+    <value>Posts</value>
   </data>
   <data name="ReturnToList" xml:space="preserve">
     <value>Return to list</value>
@@ -150,7 +210,28 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="SelectAuthor" xml:space="preserve">
+    <value>Select Author</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="SelectPosition" xml:space="preserve">
+    <value>Select Position</value>
+  </data>
+  <data name="Tag" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
   <data name="Update" xml:space="preserve">
     <value>Update</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
   </data>
 </root>

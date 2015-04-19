@@ -1,24 +1,24 @@
 ﻿@model IQueryable<NewsSite.Core.Database.Tables.Tag>
 
 @{
-    ViewBag.Title = "Etiketler";
+    ViewBag.Title = Resource.Tags;
 }
 
-<a href='@Url.Action("AddTag", "Tag")' class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Yeni Etiket</a>
+<a href='@Url.Action("AddTag", "Tag")' class="btn btn-primary"><span class="fa fa-plus fa-fw"></span>@Resource.AddTag</a>
 <hr />
 
 @using GridMvc.Html
 @Html.Grid(Model).Columns(columns =>
 {
     columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Edit(x));
-    columns.Add(column => column.Name).Titled("Etiket").Sortable(true);
-    columns.Add(column => column.Description).Titled("Açıklama").Sortable(true);
-    columns.Add(column => column.IsActive).Titled("Aktif").Sortable(true);
-    columns.Add(column => column.Slug).Titled("Seo Ad").Sortable(true);
+    columns.Add(column => column.Name).Titled(Resource.Tag).Sortable(true);
+    columns.Add(column => column.Description).Titled(Resource.Description).Sortable(true);
+    columns.Add(column => column.Slug).Titled("Seo").Sortable(true);
+    columns.Add(column => column.IsActive).Titled(Resource.Active).Sortable(true);
 }).WithPaging(20)
 
 @helper Edit(NewsSite.Core.Database.Tables.Tag tag)
 {
     <a href='@Url.Action("EditTag", "Tag", new { id = tag.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
-    <a href='@Url.Action("DeleteTag", "Tag", new { id = tag.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+    <a href='@Url.Action("DeleteTag", "Tag", new { id = tag.Id })' onclick="return confirm('@Resource.DeleteConfirmation')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
 }

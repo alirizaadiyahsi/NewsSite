@@ -1,7 +1,7 @@
 ﻿@model NewsSite.Web.Areas.Admin.Models.PictureModel
 
 @{
-    ViewBag.Title = Model.PictureGalery.Name + " - Resimler";
+    ViewBag.Title = Model.PictureGalery.Name + " - " + Resource.Pictures;
 }
 
 @using (Html.BeginForm("AddPicture", "PictureGalery", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-inline" }))
@@ -17,11 +17,11 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Order, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Order, new { htmlAttributes = new { @class = "form-control", placeholder = "Sıra" } })
+            @Html.EditorFor(model => model.Order, new { htmlAttributes = new { @class = "form-control", placeholder = Resource.Order } })
             @Html.ValidationMessageFor(model => model.Order, "", new { @class = "text-danger" })
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Yükle</button>
+    <button type="submit" class="btn btn-primary">@Resource.Upload</button>
 }
 <hr />
 
@@ -34,7 +34,7 @@
 
 @helper Edit(NewsSite.Core.Database.Tables.Picture Picture)
 {
-    <a href='@Url.Action("DeletePicture", "PictureGalery", new { id = Picture.Id })' onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+    <a href='@Url.Action("DeletePicture", "PictureGalery", new { id = Picture.Id })' onclick="return confirm('@Resource.DeleteConfirmation')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
 }
 
 @helper Image(NewsSite.Core.Database.Tables.Picture Picture)
