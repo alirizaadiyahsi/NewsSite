@@ -14,7 +14,6 @@ NewsSite uses a number of open source projects to work properly:
 * [Grid.Mvc] - IQueryable datasource support grid
 * [CK Editor] - Content editing tool
 * [SB Admin 2] - Admin theme
-* [Localization] - Localization library to manage locales with helpers and xml files
 
 ### Installation
 
@@ -45,4 +44,3 @@ MIT
 [Grid.Mvc]:https://gridmvc.codeplex.com/
 [CK Editor]:http://ckeditor.com/
 [SB Admin 2]:http://startbootstrap.com/template-overviews/sb-admin-2/
-[Localization]:https://github.com/yasinkuyu/Localization
