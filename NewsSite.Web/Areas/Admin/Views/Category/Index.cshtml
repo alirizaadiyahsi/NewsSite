@@ -1,7 +1,7 @@
 ﻿@model IQueryable<NewsSite.Core.Database.Tables.Category>
 
 @{
-    ViewBag.Title = "Categories";
+    ViewBag.Title = Resource.Categories;
 }
 
 <a href='@Url.Action("AddCategory", "Category")' class="btn btn-primary"><i class="fa fa-plus fa-fw"></i>New Category</a>
@@ -11,15 +11,15 @@
 @Html.Grid(Model).Columns(columns =>
 {
     columns.Add().Encoded(false).Sanitized(false).RenderValueAs(x => Edit(x));
-    columns.Add(column => column.Name).Titled("Kategori").Sortable(true);
-    columns.Add(column => column.Description).Titled("Açıklama").Sortable(true);
-    columns.Add(column => column.IsActive).Titled("Aktif").Sortable(true);
-    columns.Add(column => column.Order).Titled("Sıra").Sortable(true);
-    columns.Add(column => column.Slug).Titled("Seo Ad").Sortable(true);
+    columns.Add(column => column.Name).Titled(Resource.Category).Sortable(true);
+    columns.Add(column => column.Description).Titled(Resource.Description).Sortable(true);
+    columns.Add(column => column.Order).Titled(Resource.Order).Sortable(true);
+    columns.Add(column => column.Slug).Titled("Seo").Sortable(true);
+    columns.Add(column => column.IsActive).Titled(Resource.Active).Sortable(true);
 }).WithPaging(20)
 
 @helper Edit(NewsSite.Core.Database.Tables.Category category)
 {
     <a href='@Url.Action("EditCategory", "Category", new { id = category.Id })' class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
-    <a href='@Url.Action("DeleteCategory", "Category", new { id = category.Id })' onclick="return confirm('Are you sure you want to delete?')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+    <a href='@Url.Action("DeleteCategory", "Category", new { id = category.Id })' onclick="return confirm('@Resource.DeleteConfirmation')" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
 }
